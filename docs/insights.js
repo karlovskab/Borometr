@@ -14,10 +14,106 @@
  function renderMonths(){q('#monthlyTable').innerHTML='<caption>Teplota vzduchu ve 2 m · ERA5-Land · °C</caption><thead><tr><th scope="col">Rok</th>'+months.map(m=>`<th scope="col">${m}</th>`).join('')+'</tr></thead><tbody>'+climate.annual.map(r=>`<tr class="${r.year===chosen?'chosen':''}"><th scope="row">${r.year}</th>`+r.monthly_C.map((v,m)=>`<td><button data-year="${r.year}" data-month="${m}" class="${r.year===chosen&&m===chosenMonth?'selected':''}" style="background:${heatColor(v)}" aria-label="${months[m]} ${r.year}: ${f(v)} °C" title="${months[m]} ${r.year}: ${f(v,2)} °C">${f(v)}</button></td>`).join('')+'</tr>').join('')+'</tbody>';q('#monthlyTable').querySelectorAll('button').forEach(el=>el.onclick=()=>choose(+el.dataset.year,+el.dataset.month))}
  q('#indexMetric').onchange=renderChart;
  fetch('climate-indices.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(j=>{climate=j;renderChart();renderYear();renderMonths();q('#indicesTable').innerHTML='<thead><tr>'+['Rok','Roční °C','Odchylka °C','Léto °C','Letní dny','Tropické dny','Nejdelší řada dnů','CDD18 °C·den'].map(x=>`<th>${x}</th>`).join('')+'</tr></thead><tbody>'+j.annual.map(r=>'<tr>'+[r.year,f(r.mean_C,2),f(r.anomaly_C,2),f(r.summer_C,2),r.summer_days,r.tropical_days,r.longest_hot_run_days,f(r.CDD18_C_days)].map(x=>`<td>${x}</td>`).join('')+'</tr>').join('')+'</tbody>'}).catch(()=>{q('#indexYear').textContent='Podrobné klimatické údaje se nepodařilo načíst. Zkuste stránku obnovit.'});
- function zoneStats(){if(!landscape)return;const z=landscape.zones.find(x=>x.id===q('#zoneSelect').value);q('#zoneStats').innerHTML=[[f(z.median_C)+' °C','Medián povrchu','Prostřední hodnota'],[f(z.p10_C)+'–'+f(z.p90_C)+' °C','P10–P90','Prostředních přibližně 80 % hodnot'],[f(z.hot35_pct)+' %','Povrch ≥ 35 °C','Z platných teplotních buněk'],[f(z.ndvi_median,2),'Medián NDVI','Vegetační index · bez jednotky'],[f(z.min_C)+' °C','Minimum povrchu','Nejchladnější platná buňka'],[f(z.max_C)+' °C','Maximum povrchu','Nejteplejší platná buňka'],[f(z.ndvi_high_pct)+' %','NDVI ≥ 0,50','Podíl zelenějších buněk, ne korun'],[z.temperature_valid.toLocaleString('cs-CZ'),'Platné teplotní buňky','Počet buněk výstupní mřížky']].map(([v,l,t])=>`<div class="zoneStat"><div class="statLabel">${l}</div><strong>${v}</strong><span>${t}</span></div>`).join('');q('#zoneCoverage').textContent=`${z.name} · celkem ${z.cells.toLocaleString('cs-CZ')} buněk. Teplota dostupná pro ${f(z.temperature_coverage_pct,2)} %, NDVI pro ${f(z.ndvi_coverage_pct,2)} % (${z.ndvi_valid.toLocaleString('cs-CZ')} buněk). Statistiky teplot jsou odvozeny z rastru zaokrouhleného na 0,01 °C. Okruhy školy a OV nejsou nezávislá území.`}
- q('#zoneSelect').onchange=zoneStats;
+ function selectedLandscapeZone() {
+   if (!landscape) return null;
+   const selected = q('#zoneSelect').value;
+   const original = landscape.zones.find(zone => zone.id === selected);
+   if (radiusMeters === 1000 || selected === 'all') return original;
+   if (!detailData) return null;
+   const point = places.find(placeInfo => placeInfo.id === selected);
+   const temperatures = [];
+   const vegetation = [];
+   let cells = 0;
+   const [west, south, east, north] = landscape.bounds;
+   const radians = degrees => degrees * Math.PI / 180;
+   for (let row = 0; row < landscape.height; row++) {
+     const latitude = north - (row + 0.5) * (north - south) / landscape.height;
+     for (let column = 0; column < landscape.width; column++) {
+       const longitude = west + (column + 0.5) * (east - west) / landscape.width;
+       const arc = Math.sin(radians(latitude - point.lat) / 2) ** 2 +
+         Math.cos(radians(point.lat)) * Math.cos(radians(latitude)) *
+         Math.sin(radians(longitude - point.lon) / 2) ** 2;
+       const distance = 2 * 6371000 * Math.asin(Math.min(1, Math.sqrt(arc)));
+       if (distance > radiusMeters) continue;
+       cells++;
+       const temperature = detailData.temperature_C[row][column];
+       const ndvi = landscape.ndvi[row][column];
+       if (Number.isFinite(temperature)) temperatures.push(temperature);
+       if (Number.isFinite(ndvi)) vegetation.push(ndvi);
+     }
+   }
+   temperatures.sort((a, b) => a - b);
+   vegetation.sort((a, b) => a - b);
+   const percentile = (values, fraction) => {
+     if (!values.length) return null;
+     const position = (values.length - 1) * fraction;
+     const lower = Math.floor(position);
+     const upper = Math.ceil(position);
+     return values[lower] + (values[upper] - values[lower]) * (position - lower);
+   };
+   return {
+     id: selected, name: `${point.name} · okruh ${radiusMeters} m`, cells,
+     temperature_valid: temperatures.length,
+     temperature_coverage_pct: cells ? temperatures.length / cells * 100 : 0,
+     min_C: temperatures[0] ?? null, max_C: temperatures.at(-1) ?? null,
+     median_C: percentile(temperatures, 0.5),
+     p10_C: percentile(temperatures, 0.1), p90_C: percentile(temperatures, 0.9),
+     hot35_pct: temperatures.length ? temperatures.filter(value => value >= 35).length / temperatures.length * 100 : null,
+     ndvi_valid: vegetation.length,
+     ndvi_coverage_pct: cells ? vegetation.length / cells * 100 : 0,
+     ndvi_median: percentile(vegetation, 0.5),
+     ndvi_high_pct: vegetation.length ? vegetation.filter(value => value >= 0.5).length / vegetation.length * 100 : null
+   };
+ }
+
+ function zoneStats() {
+   q('#zoneSelect').options[0].textContent = `Okruh školy · ${f(radiusMeters,0)} m`;
+   q('#zoneSelect').options[1].textContent = `Okruh OV · ${f(radiusMeters,0)} m`;
+   q('#zoneTitle').textContent = `Jak vypadá okolí do ${f(radiusMeters,0)} metrů?`;
+   q('#radiusStatsNote').textContent = radiusMeters === 100 ?
+     'U okruhu 100 m vyhodnocujeme malou oblast s několika tepelnými rozlišovacími prvky senzoru. Buňky výstupní mřížky jsou jemnější a sousední hodnoty spolu souvisejí. Pro rozdíly mezi stínem a asfaltem potřebujeme terénní měření.' :
+     'Okruhy 1 000 m poskytují širší kontext a navzájem se překrývají. Teplota povrchu má rozlišení senzoru přibližně 100 m.';
+   const zone = selectedLandscapeZone();
+   q('#downloadZoneStats').disabled = !zone;
+   if (!zone) {
+     q('#zoneStats').textContent = 'Načítám rastry pro výpočet zvoleného okruhu…';
+     return;
+   }
+   q('#zoneStats').innerHTML = [
+     [f(zone.median_C)+' °C', 'Medián povrchu', 'Prostřední hodnota'],
+     [f(zone.p10_C)+'–'+f(zone.p90_C)+' °C', 'P10–P90', 'Prostředních přibližně 80 % hodnot'],
+     [f(zone.hot35_pct)+' %', 'Povrch ≥ 35 °C', 'Z platných teplotních buněk'],
+     [f(zone.ndvi_median,2), 'Medián NDVI', 'Vegetační index · bez jednotky'],
+     [f(zone.min_C)+' °C', 'Minimum povrchu', 'Nejchladnější platná buňka'],
+     [f(zone.max_C)+' °C', 'Maximum povrchu', 'Nejteplejší platná buňka'],
+     [f(zone.ndvi_high_pct)+' %', 'NDVI ≥ 0,50', 'Podíl zelenějších buněk, ne korun'],
+     [zone.temperature_valid.toLocaleString('cs-CZ'), 'Platné teplotní buňky', 'Počet buněk výstupní mřížky']
+   ].map(([value,label,explanation]) => `<div class="zoneStat"><div class="statLabel">${label}</div><strong>${value}</strong><span>${explanation}</span></div>`).join('');
+   q('#zoneCoverage').textContent = `${zone.name} · celkem ${zone.cells.toLocaleString('cs-CZ')} buněk. ` +
+     `Teplota dostupná pro ${f(zone.temperature_coverage_pct,2)} %, NDVI pro ${f(zone.ndvi_coverage_pct,2)} % (${zone.ndvi_valid.toLocaleString('cs-CZ')} buněk). ` +
+     'Počítáme buňky se středem uvnitř výběru. Teploty jsou odvozeny z rastru zaokrouhleného na 0,01 °C. Celý výřez má vlastní pevné hranice.';
+ }
+ q('#zoneSelect').onchange = zoneStats;
+ document.addEventListener('mapradiuschange', zoneStats);
+ document.addEventListener('thermaldataready', zoneStats);
+ q('#downloadZoneStats').onclick = () => {
+   const zone = selectedLandscapeZone();
+   if (!zone) return;
+   const blob = new Blob([JSON.stringify({
+     scene: landscape.scene, acquired: landscape.acquired,
+     radius_m: zone.id === 'all' ? null : radiusMeters,
+     thermal_sensor_resolution_m: 100, optical_band_resolution_m: 30,
+     method: zone.id === 'all' ? 'All valid cell centres in the full available cutout; equal cell weights.' : `Cell centres within a haversine ${radiusMeters} m circle; equal cell weights. Thermal source resolution is approximately 100 m.`, thresholds: landscape.thresholds, statistics: zone
+   }, null, 2)], {type: 'application/json'});
+   const link = document.createElement('a');
+   link.href = URL.createObjectURL(blob);
+   link.download = `Borometr_${zone.id}_${zone.id === 'all' ? 'vyrez' : radiusMeters+'m'}_2025-08-12.json`;
+   link.click();
+   setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+ };
+
  function pixel(p){if(!landscape)return null;const b=landscape.bounds,x=Math.floor((p.lng-b[0])/(b[2]-b[0])*100),y=Math.floor((b[3]-p.lat)/(b[3]-b[1])*100);return x<0||y<0||x>=100||y>=100?null:{x,y,ndvi:landscape.ndvi[y][x]}}
- const baseDetailHtml=detailHtml;detailHtml=function(p){const cell=pixel(p);let html=baseDetailHtml(p);if(cell){const z=landscape.zones.find(x=>x.id===q('#zoneSelect').value),t=sampleDetail(p);html+=`<div class="pixelExtra"><b>NDVI: ${f(cell.ndvi,2)}</b> · stejný přelet<br>Buňka výřezu: řádek ${cell.y+1}, sloupec ${cell.x+1}<br>${t===null?'':`Povrch vůči mediánu zóny „${z.name}“: ${t-z.median_C>=0?'+':''}${f(t-z.median_C)} °C.<br>`}<small>Porovnání s referenční zónou, i pokud bod leží mimo ni. NDVI neudává počet stromů.</small></div>`}return html};
+ const baseDetailHtml=detailHtml;detailHtml=function(p){const cell=pixel(p);let html=baseDetailHtml(p);if(cell){const z=selectedLandscapeZone(),t=sampleDetail(p);html+=`<div class="pixelExtra"><b>NDVI: ${f(cell.ndvi,2)}</b> · stejný přelet<br>Buňka výřezu: řádek ${cell.y+1}, sloupec ${cell.x+1}<br>${t===null||!Number.isFinite(z?.median_C)?'':`Povrch vůči mediánu zóny „${z.name}“: ${t-z.median_C>=0?'+':''}${f(t-z.median_C)} °C.<br>`}<small>Porovnání s referenční zónou, i pokud bod leží mimo ni. NDVI neudává počet stromů.</small></div>`}return html};
  function ndviHtml(p){const cell=pixel(p);return `<b>NDVI · ${cell?f(cell.ndvi,2):'mimo výřez'}</b><br>Landsat 9 · 12. 8. 2025, 11:57 SELČ<br>${p.lat.toFixed(5)}, ${p.lng.toFixed(5)}<br><small>Optické pásmo cca 30 m. Index zelenosti, nikoli dnešní teplota nebo procento stromů.</small>${cell?`<br>Buňka ${cell.y+1} / ${cell.x+1}`:''}`}
  function ndviMarkers(){labels.forEach((l,i)=>{const p=places.filter(p=>place==='both'||p.id===place)[i],v=pixel({lat:p.lat,lng:p.lon});l.setIcon(L.divIcon({className:'livepoint tempLabel',html:`${p.id==='school'?'Škola':'OV'} · NDVI ${v?f(v.ndvi,2):'—'}<div style="font-size:9px;font-weight:400;color:#66776d">Okolní pixel · 12. 8. 2025</div>`}));l.bindPopup(ndviHtml({lat:p.lat,lng:p.lon}))})}
  const baseDraw=drawMap;drawMap=function(fit){baseDraw(fit);renderLiveMapReadings();if(detailOn)q('#mapTitle').textContent='Bor · teplota povrchu · 12. 8. 2025';if(q('#cityLayer').value==='ndvi'&&landscape&&map){ndviMarkers();q('#mapTitle').textContent='Bor · vegetační index NDVI · 12. 8. 2025';q('#mapNote').textContent='Barvy a štítky nyní ukazují vegetační index NDVI. Zelenější pixel může zahrnovat stromy, trávu i zemědělské porosty. Teplota a NDVI jsou různé veličiny.'}};
@@ -26,4 +122,5 @@
  if(map)map.on('click',e=>{if(q('#cityLayer').value==='ndvi'){const html=ndviHtml(e.latlng);q('#detailReadout').innerHTML=html;L.popup({maxWidth:340}).setLatLng(e.latlng).setContent(html).openOn(map)}});
  fetch('landscape-indices.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(j=>{landscape=j;zoneStats();if(q('#cityLayer').value==='ndvi')showThermal()}).catch(()=>{q('#zoneStats').textContent='Statistiky krajiny se nepodařilo načíst. Zkuste stránku obnovit.';if(q('#cityLayer').value==='ndvi')q('#thermalInfo').textContent='Vegetace se nepodařila načíst. Zkuste obnovit stránku.'});
 })();
+
 
