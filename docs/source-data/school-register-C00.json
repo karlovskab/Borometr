@@ -1,0 +1,3434 @@
+{
+  "date": "2026-11-02",
+  "schools": [
+    {
+      "redizo": "600008908",
+      "izo": "048342912",
+      "name": "Gymnázium J.Š.Baara, Domažlice, Pivovarská 323",
+      "address": {
+        "ulice": "Pivovarská",
+        "cisloDomovni": 323,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Domažlice",
+        "castObce": "Týnské Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "344 01",
+        "kodRUIAN": 6889573,
+        "okres": "CZ0321",
+        "uzemiDleORP": "CZ03202"
+      },
+      "locations": [
+        {
+          "IDmista": "048342912",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Pivovarská",
+            "cisloDomovni": 323,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Domažlice",
+            "castObce": "Týnské Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "344 01",
+            "kodRUIAN": 6889573,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600008924",
+      "izo": "110026420",
+      "name": "Soukromá Střední odborná škola a Gymnázium BEAN, s.r.o.",
+      "address": {
+        "ulice": "Trnkova",
+        "cisloDomovni": 125,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Staňkov",
+        "castObce": "Staňkov I",
+        "cisloObvoduPrahy": null,
+        "psc": "345 61",
+        "kodRUIAN": 20837283,
+        "okres": "CZ0321",
+        "uzemiDleORP": "CZ03204"
+      },
+      "locations": [
+        {
+          "IDmista": "110026420",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Trnkova",
+            "cisloDomovni": 125,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Staňkov",
+            "castObce": "Staňkov I",
+            "cisloObvoduPrahy": null,
+            "psc": "345 61",
+            "kodRUIAN": 20837283,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600008932",
+      "izo": "048342939",
+      "name": "Vyšší odborná škola, Obchodní akademie a Střední zdravotnická škola, Domažlice, Erbenova 184",
+      "address": {
+        "ulice": "Erbenova",
+        "cisloDomovni": 184,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Domažlice",
+        "castObce": "Týnské Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "344 01",
+        "kodRUIAN": 6888321,
+        "okres": "CZ0321",
+        "uzemiDleORP": "CZ03202"
+      },
+      "locations": [
+        {
+          "IDmista": "151025703",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Chodské náměstí",
+            "cisloDomovni": 97,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Domažlice",
+            "castObce": "Město",
+            "cisloObvoduPrahy": null,
+            "psc": "344 01",
+            "kodRUIAN": 6886132,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        },
+        {
+          "IDmista": "048342939",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Erbenova",
+            "cisloDomovni": 184,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Domažlice",
+            "castObce": "Týnské Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "344 01",
+            "kodRUIAN": 6888321,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600008941",
+      "izo": "018230083",
+      "name": "Střední odborné učiliště, Domažlice, Prokopa Velikého 640",
+      "address": {
+        "ulice": "Prokopa Velikého",
+        "cisloDomovni": 640,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Domažlice",
+        "castObce": "Týnské Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "344 01",
+        "kodRUIAN": 6892515,
+        "okres": "CZ0321",
+        "uzemiDleORP": "CZ03202"
+      },
+      "locations": [
+        {
+          "IDmista": "151024693",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Hradecká",
+            "cisloDomovni": 482,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stod",
+            "castObce": "Stod",
+            "cisloObvoduPrahy": null,
+            "psc": "333 01",
+            "kodRUIAN": 957755,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03212"
+          }
+        },
+        {
+          "IDmista": "151024685",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Plzeňská",
+            "cisloDomovni": 29,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stod",
+            "castObce": "Stod",
+            "cisloObvoduPrahy": null,
+            "psc": "333 01",
+            "kodRUIAN": 953598,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03212"
+          }
+        },
+        {
+          "IDmista": "130002232",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Plzeňská",
+            "cisloDomovni": 322,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stod",
+            "castObce": "Stod",
+            "cisloObvoduPrahy": null,
+            "psc": "333 01",
+            "kodRUIAN": 956171,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03212"
+          }
+        },
+        {
+          "IDmista": "018230083",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Prokopa Velikého",
+            "cisloDomovni": 640,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Domažlice",
+            "castObce": "Týnské Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "344 01",
+            "kodRUIAN": 6892515,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        },
+        {
+          "IDmista": "181082594",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Plzeňská",
+            "cisloDomovni": 245,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stod",
+            "castObce": "Stod",
+            "cisloObvoduPrahy": null,
+            "psc": "333 01",
+            "kodRUIAN": 955485,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03212"
+          }
+        },
+        {
+          "IDmista": "151025347",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Prokopa Velikého",
+            "cisloDomovni": 653,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Domažlice",
+            "castObce": "Týnské Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "344 01",
+            "kodRUIAN": 25223381,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        },
+        {
+          "IDmista": "151025355",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Rohova",
+            "cisloDomovni": 232,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Domažlice",
+            "castObce": "Dolejší Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "344 01",
+            "kodRUIAN": 25128311,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        },
+        {
+          "IDmista": "151024677",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Komenského nám.",
+            "cisloDomovni": 1,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stod",
+            "castObce": "Stod",
+            "cisloObvoduPrahy": null,
+            "psc": "333 01",
+            "kodRUIAN": 953351,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03212"
+          }
+        },
+        {
+          "IDmista": "151025363",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Rohova",
+            "cisloDomovni": 233,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Domažlice",
+            "castObce": "Dolejší Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "344 01",
+            "kodRUIAN": 25223364,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009327",
+      "izo": "000076996",
+      "name": "Gymnázium Jaroslava Vrchlického, Klatovy, Národních mučedníků 347",
+      "address": {
+        "ulice": "Národních mučedníků",
+        "cisloDomovni": 347,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Klatovy",
+        "castObce": "Klatovy IV",
+        "cisloObvoduPrahy": null,
+        "psc": "339 01",
+        "kodRUIAN": 21501289,
+        "okres": "CZ0322",
+        "uzemiDleORP": "CZ03205"
+      },
+      "locations": [
+        {
+          "IDmista": "000076996",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Národních mučedníků",
+            "cisloDomovni": 347,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy IV",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21501289,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009335",
+      "izo": "000077143",
+      "name": "Střední průmyslová škola, Klatovy, nábřeží Kpt. Nálepky 362",
+      "address": {
+        "ulice": "nábř. Kpt. Nálepky",
+        "cisloDomovni": 362,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Klatovy",
+        "castObce": "Klatovy III",
+        "cisloObvoduPrahy": null,
+        "psc": "339 01",
+        "kodRUIAN": 21491097,
+        "okres": "CZ0322",
+        "uzemiDleORP": "CZ03205"
+      },
+      "locations": [
+        {
+          "IDmista": "151025657",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Voříškova",
+            "cisloDomovni": 526,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy III",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21492727,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "000077143",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "nábř. Kpt. Nálepky",
+            "cisloDomovni": 362,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy III",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21491097,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "130002534",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Voříškova",
+            "cisloDomovni": 823,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy III",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21495688,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "151025673",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Franty Šumavského",
+            "cisloDomovni": 150,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy III",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21489220,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009360",
+      "izo": "000077003",
+      "name": "Gymnázium, Sušice, Fr. Procházky 324",
+      "address": {
+        "ulice": "F. Procházky",
+        "cisloDomovni": 324,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Sušice",
+        "castObce": "Sušice II",
+        "cisloObvoduPrahy": null,
+        "psc": "342 01",
+        "kodRUIAN": 7008571,
+        "okres": "CZ0322",
+        "uzemiDleORP": "CZ03214"
+      },
+      "locations": [
+        {
+          "IDmista": "000077003",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "F. Procházky",
+            "cisloDomovni": 324,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Sušice",
+            "castObce": "Sušice II",
+            "cisloObvoduPrahy": null,
+            "psc": "342 01",
+            "kodRUIAN": 7008571,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03214"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009386",
+      "izo": "000077232",
+      "name": "Vyšší odborná škola, Obchodní akademie, Střední zdravotnická škola a Jazyková škola s právem státní jazykové zkoušky, Klatovy, Plánická 196",
+      "address": {
+        "ulice": "Plánická",
+        "cisloDomovni": 196,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Klatovy",
+        "castObce": "Klatovy I",
+        "cisloObvoduPrahy": null,
+        "psc": "339 01",
+        "kodRUIAN": 21477833,
+        "okres": "CZ0322",
+        "uzemiDleORP": "CZ03205"
+      },
+      "locations": [
+        {
+          "IDmista": "181060302",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Puškinova",
+            "cisloDomovni": 108,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy IV",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21498962,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "151025746",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Hálkova",
+            "cisloDomovni": 131,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy V",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 27262545,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "151003360",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Erbenovo náměstí",
+            "cisloDomovni": 137,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy V",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 26239183,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "000077232",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Plánická",
+            "cisloDomovni": 196,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy I",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21477833,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "110009801",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Kollárova",
+            "cisloDomovni": 444,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy III",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21491909,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009408",
+      "izo": "107840294",
+      "name": "Střední škola, Horažďovice, Blatenská 313",
+      "address": {
+        "ulice": "Blatenská",
+        "cisloDomovni": 313,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Horažďovice",
+        "castObce": "Horažďovice",
+        "cisloObvoduPrahy": null,
+        "psc": "341 01",
+        "kodRUIAN": 2886332,
+        "okres": "CZ0322",
+        "uzemiDleORP": "CZ03203"
+      },
+      "locations": [
+        {
+          "IDmista": "107840294",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Blatenská",
+            "cisloDomovni": 313,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horažďovice",
+            "castObce": "Horažďovice",
+            "cisloObvoduPrahy": null,
+            "psc": "341 01",
+            "kodRUIAN": 2886332,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03203"
+          }
+        },
+        {
+          "IDmista": "181089394",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Strakonická",
+            "cisloDomovni": 952,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horažďovice",
+            "castObce": "Horažďovice",
+            "cisloObvoduPrahy": null,
+            "psc": "341 01",
+            "kodRUIAN": 2892600,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03203"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009416",
+      "izo": "107840308",
+      "name": "Střední odborná škola a Střední odborné učiliště, Sušice, U Kapličky 761",
+      "address": {
+        "ulice": "U Kapličky",
+        "cisloDomovni": 761,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Sušice",
+        "castObce": "Sušice II",
+        "cisloObvoduPrahy": null,
+        "psc": "342 01",
+        "kodRUIAN": 7013027,
+        "okres": "CZ0322",
+        "uzemiDleORP": "CZ03214"
+      },
+      "locations": [
+        {
+          "IDmista": "107840308",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "U Kapličky",
+            "cisloDomovni": 761,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Sušice",
+            "castObce": "Sušice II",
+            "cisloObvoduPrahy": null,
+            "psc": "342 01",
+            "kodRUIAN": 7013027,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03214"
+          }
+        },
+        {
+          "IDmista": "151024545",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Poštovní",
+            "cisloDomovni": 9,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Sušice",
+            "castObce": "Sušice I",
+            "cisloObvoduPrahy": null,
+            "psc": "342 01",
+            "kodRUIAN": 7003269,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03214"
+          }
+        },
+        {
+          "IDmista": "151024537",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Na Hrázi",
+            "cisloDomovni": 1413,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Sušice",
+            "castObce": "Sušice II",
+            "cisloObvoduPrahy": null,
+            "psc": "342 01",
+            "kodRUIAN": 85355488,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03214"
+          }
+        },
+        {
+          "IDmista": "181026597",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Na Burince",
+            "cisloDomovni": 350,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Sušice",
+            "castObce": "Sušice III",
+            "cisloObvoduPrahy": null,
+            "psc": "342 01",
+            "kodRUIAN": 7021780,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03214"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009424",
+      "izo": "000077313",
+      "name": "Střední škola zemědělská a potravinářská, Klatovy, Národních mučedníků 141",
+      "address": {
+        "ulice": "Národních mučedníků",
+        "cisloDomovni": 141,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Klatovy",
+        "castObce": "Klatovy IV",
+        "cisloObvoduPrahy": null,
+        "psc": "339 01",
+        "kodRUIAN": 21499276,
+        "okres": "CZ0322",
+        "uzemiDleORP": "CZ03205"
+      },
+      "locations": [
+        {
+          "IDmista": "000077313",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Národních mučedníků",
+            "cisloDomovni": 141,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy IV",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21499276,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "181067536",
+          "typ": "C10",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 17,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Železná Ruda",
+            "castObce": "Špičák",
+            "cisloObvoduPrahy": null,
+            "psc": "340 04",
+            "kodRUIAN": 12051713,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        },
+        {
+          "IDmista": "107840286",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Šmeralova",
+            "cisloDomovni": 197,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Klatovy",
+            "castObce": "Klatovy IV",
+            "cisloObvoduPrahy": null,
+            "psc": "339 01",
+            "kodRUIAN": 21499811,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03205"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009459",
+      "izo": "049778137",
+      "name": "Sportovní gymnázium Plzeň",
+      "address": {
+        "ulice": "Vejprnická",
+        "cisloDomovni": 663,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 56,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Skvrňany",
+        "cisloObvoduPrahy": null,
+        "psc": "318 00",
+        "kodRUIAN": 24562106,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049778137",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Vejprnická",
+            "cisloDomovni": 663,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 56,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24562106,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009467",
+      "izo": "000574406",
+      "name": "Střední škola informatiky a finančních služeb, Plzeň, Klatovská 200 G",
+      "address": {
+        "ulice": "Klatovská třída",
+        "cisloDomovni": 2778,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 200,
+        "dodatekOrientacnihoCisla": "g",
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 25567756,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "000574406",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Klatovská třída",
+            "cisloDomovni": 2778,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 200,
+            "dodatekOrientacnihoCisla": "g",
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 25567756,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151026394",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Klatovská třída",
+            "cisloDomovni": 2777,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 200,
+            "dodatekOrientacnihoCisla": "c",
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 25567748,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009491",
+      "izo": "049774301",
+      "name": "Vyšší odborná škola a Střední průmyslová škola elektrotechnická, Plzeň, Koterovská 85",
+      "address": {
+        "ulice": "Koterovská",
+        "cisloDomovni": 828,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 85,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Lobzy",
+        "cisloObvoduPrahy": null,
+        "psc": "326 00",
+        "kodRUIAN": 24495492,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049774301",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Koterovská",
+            "cisloDomovni": 828,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 85,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Lobzy",
+            "cisloObvoduPrahy": null,
+            "psc": "326 00",
+            "kodRUIAN": 24495492,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009530",
+      "izo": "049778099",
+      "name": "Masarykovo gymnázium, Plzeň, Petákova 2",
+      "address": {
+        "ulice": "Petákova",
+        "cisloDomovni": 2055,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 2,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24549894,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049778099",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Petákova",
+            "cisloDomovni": 2055,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 2,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24549894,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009548",
+      "izo": "049778102",
+      "name": "Gymnázium Luďka Pika, Plzeň, Opavská 21",
+      "address": {
+        "ulice": "Opavská",
+        "cisloDomovni": 823,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 21,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Doubravka",
+        "cisloObvoduPrahy": null,
+        "psc": "312 00",
+        "kodRUIAN": 24465224,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049778102",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Opavská",
+            "cisloDomovni": 823,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 21,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Doubravka",
+            "cisloObvoduPrahy": null,
+            "psc": "312 00",
+            "kodRUIAN": 24465224,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009556",
+      "izo": "049778145",
+      "name": "Gymnázium, Plzeň, Mikulášské nám. 23",
+      "address": {
+        "ulice": "Mikulášské náměstí",
+        "cisloDomovni": 808,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 23,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Východní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "326 00",
+        "kodRUIAN": 24504114,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049778145",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Mikulášské náměstí",
+            "cisloDomovni": 808,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 23,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Východní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "326 00",
+            "kodRUIAN": 24504114,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009564",
+      "izo": "064353389",
+      "name": "Bezpečnostně právní akademie Plzeň, s.r.o., střední škola",
+      "address": {
+        "ulice": "Tylova",
+        "cisloDomovni": 988,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 18,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24539431,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "064353389",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Tylova",
+            "cisloDomovni": 988,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 18,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24562882,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009599",
+      "izo": "049778161",
+      "name": "Obchodní akademie, Plzeň, nám. T. G. Masaryka 13",
+      "address": {
+        "ulice": "náměstí T. G. Masaryka",
+        "cisloDomovni": 1530,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 13,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24543888,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049778161",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "náměstí T. G. Masaryka",
+            "cisloDomovni": 1530,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 13,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24543888,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009602",
+      "izo": "000520152",
+      "name": "Střední odborná škola obchodu, užitého umění a designu, Plzeň, Nerudova 33",
+      "address": {
+        "ulice": "Nerudova",
+        "cisloDomovni": 1214,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 33,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24542032,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "000520152",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Nerudova",
+            "cisloDomovni": 1214,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 33,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24542032,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "181026627",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Klatovská třída",
+            "cisloDomovni": 986,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 200,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24539392,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009611",
+      "izo": "040527867",
+      "name": "Církevní gymnázium Plzeň",
+      "address": {
+        "ulice": "Mikulášské náměstí",
+        "cisloDomovni": 509,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 15,
+        "dodatekOrientacnihoCisla": "",
+        "obec": "Plzeň",
+        "castObce": "Východní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "326 00",
+        "kodRUIAN": 24500658,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "040527867",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Mikulášské náměstí",
+            "cisloDomovni": 509,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 15,
+            "dodatekOrientacnihoCisla": "",
+            "obec": "Plzeň",
+            "castObce": "Východní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "326 00",
+            "kodRUIAN": 24500658,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009637",
+      "izo": "049775961",
+      "name": "Gymnázium Františka Křižíka a základní škola, s.r.o.",
+      "address": {
+        "ulice": "Sokolovská",
+        "cisloDomovni": 1165,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 54,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Bolevec",
+        "cisloObvoduPrahy": null,
+        "psc": "323 00",
+        "kodRUIAN": 24426351,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049775961",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Sokolovská",
+            "cisloDomovni": 1165,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 54,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Bolevec",
+            "cisloObvoduPrahy": null,
+            "psc": "323 00",
+            "kodRUIAN": 24426351,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009661",
+      "izo": "049776541",
+      "name": "PLZEŇSKÁ OBCHODNÍ AKADEMIE s.r.o.",
+      "address": {
+        "ulice": "Politických vězňů",
+        "cisloDomovni": 2003,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 5,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24549291,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049776541",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Politických vězňů",
+            "cisloDomovni": 2003,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 5,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24549291,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009670",
+      "izo": "110037545",
+      "name": "Střední uměleckoprůmyslová škola a Základní umělecká škola Zámeček s.r.o.",
+      "address": {
+        "ulice": "Pod Vinicemi",
+        "cisloDomovni": 889,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 82,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Severní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24485373,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "151021236",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Zámecké náměstí",
+            "cisloDomovni": 80,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 9,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Křimice",
+            "cisloObvoduPrahy": null,
+            "psc": "322 00",
+            "kodRUIAN": 24410284,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "110037545",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Pod Vinicemi",
+            "cisloDomovni": 889,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 82,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Severní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24485373,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009696",
+      "izo": "110034538",
+      "name": "Akademie hotelnictví a cestovního ruchu - střední škola, s.r.o.",
+      "address": {
+        "ulice": "Nade Mží",
+        "cisloDomovni": 734,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 1,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Skvrňany",
+        "cisloObvoduPrahy": null,
+        "psc": "318 00",
+        "kodRUIAN": 24562882,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "110034538",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Nade Mží",
+            "cisloDomovni": 734,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 1,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24562882,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009700",
+      "izo": "110100204",
+      "name": "Hotelová škola, Plzeň, U Borského parku 3",
+      "address": {
+        "ulice": "U Borského parku",
+        "cisloDomovni": 1213,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 3,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24542016,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "000521094",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Bendova",
+            "cisloDomovni": 2482,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 22,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24554596,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "110100204",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "U Borského parku",
+            "cisloDomovni": 1213,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 3,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24542016,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009718",
+      "izo": "000497061",
+      "name": "Střední odborné učiliště stavební, Plzeň, Borská 55",
+      "address": {
+        "ulice": "Borská",
+        "cisloDomovni": 2718,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 55,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24557064,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "107840235",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "U klubu",
+            "cisloDomovni": 302,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horní Bříza",
+            "castObce": "Horní Bříza",
+            "cisloObvoduPrahy": null,
+            "psc": "330 12",
+            "kodRUIAN": 595195,
+            "okres": "Plzeň-sever",
+            "uzemiDleORP": "CZ03208"
+          }
+        },
+        {
+          "IDmista": "151024570",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Harantova",
+            "cisloDomovni": 276,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 3,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24532088,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151024588",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Jateční - tesárna",
+            "cisloDomovni": null,
+            "typCislaDomovniho": null,
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň-Bílá Hora",
+            "castObce": null,
+            "cisloObvoduPrahy": null,
+            "psc": "312 00",
+            "kodRUIAN": null,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "000497061",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Borská",
+            "cisloDomovni": 2718,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 55,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24557064,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151024553",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Borská",
+            "cisloDomovni": 421,
+            "typCislaDomovniho": "č.ev.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24557455,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151024561",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Křimická",
+            "cisloDomovni": 291,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 94,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24558524,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151024766",
+          "typ": "C11",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 23,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Manětín",
+            "castObce": "Brdo",
+            "cisloObvoduPrahy": null,
+            "psc": "331 62",
+            "kodRUIAN": 661724,
+            "okres": "Plzeň-sever",
+            "uzemiDleORP": "CZ03206"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009726",
+      "izo": "049777149",
+      "name": "Sportovní a podnikatelská střední škola, spol. s r.o.",
+      "address": {
+        "ulice": "sady 5. května",
+        "cisloDomovni": 2395,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 21,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Východní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24569372,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049777149",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "sady 5. května",
+            "cisloDomovni": 2395,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 21,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Východní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24569372,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009734",
+      "izo": "049778064",
+      "name": "Střední průmyslová škola stavební, Plzeň, Chodské nám. 2",
+      "address": {
+        "ulice": "Chodské náměstí",
+        "cisloDomovni": 1585,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 2,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24544523,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049778064",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Chodské náměstí",
+            "cisloDomovni": 1585,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 2,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24544523,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009742",
+      "izo": "108005666",
+      "name": "Dálková střední škola ekonomická, s.r.o.",
+      "address": {
+        "ulice": "Zábělská",
+        "cisloDomovni": 853,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 46,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Doubravka",
+        "cisloObvoduPrahy": null,
+        "psc": "312 00",
+        "kodRUIAN": 24465542,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "108005666",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Univerzitní",
+            "cisloDomovni": 2762,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 22,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 25379801,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009751",
+      "izo": "108005631",
+      "name": "Gymnázium, Blovice, Družstevní 650",
+      "address": {
+        "ulice": "Družstevní",
+        "cisloDomovni": 650,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Blovice",
+        "castObce": "Blovice",
+        "cisloObvoduPrahy": null,
+        "psc": "336 01",
+        "kodRUIAN": 20757476,
+        "okres": "CZ0324",
+        "uzemiDleORP": "CZ03201"
+      },
+      "locations": [
+        {
+          "IDmista": "108005631",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Družstevní",
+            "cisloDomovni": 650,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Blovice",
+            "castObce": "Blovice",
+            "cisloObvoduPrahy": null,
+            "psc": "336 01",
+            "kodRUIAN": 20757476,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03201"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009769",
+      "izo": "108005640",
+      "name": "Střední škola a Základní škola, Oselce",
+      "address": {
+        "ulice": null,
+        "cisloDomovni": 1,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Oselce",
+        "castObce": "Oselce",
+        "cisloObvoduPrahy": null,
+        "psc": "335 46",
+        "kodRUIAN": 991066,
+        "okres": "CZ0324",
+        "uzemiDleORP": "CZ03207"
+      },
+      "locations": [
+        {
+          "IDmista": "108005640",
+          "typ": "C11",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 1,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Oselce",
+            "castObce": "Oselce",
+            "cisloObvoduPrahy": null,
+            "psc": "335 46",
+            "kodRUIAN": 991066,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03207"
+          }
+        },
+        {
+          "IDmista": "151024502",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Setecká",
+            "cisloDomovni": 235,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Blovice",
+            "castObce": "Blovice",
+            "cisloObvoduPrahy": null,
+            "psc": "336 01",
+            "kodRUIAN": 20753721,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03201"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009785",
+      "izo": "108005623",
+      "name": "Církevní základní škola a střední škola Plzeň",
+      "address": {
+        "ulice": "Táborská",
+        "cisloDomovni": 2081,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 28,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Východní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "326 00",
+        "kodRUIAN": 24517933,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "108005623",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Táborská",
+            "cisloDomovni": 2081,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 28,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Východní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "326 00",
+            "kodRUIAN": 24517933,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009793",
+      "izo": "108032060",
+      "name": "Gymnázium a Střední odborná škola, Plasy",
+      "address": {
+        "ulice": "Školní",
+        "cisloDomovni": 280,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plasy",
+        "castObce": "Plasy",
+        "cisloObvoduPrahy": null,
+        "psc": "331 01",
+        "kodRUIAN": 695611,
+        "okres": "CZ0325",
+        "uzemiDleORP": "CZ03206"
+      },
+      "locations": [
+        {
+          "IDmista": "108032051",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Stará cesta",
+            "cisloDomovni": 363,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plasy",
+            "castObce": "Plasy",
+            "cisloObvoduPrahy": null,
+            "psc": "331 01",
+            "kodRUIAN": 696447,
+            "okres": "Plzeň-sever",
+            "uzemiDleORP": "CZ03206"
+          }
+        },
+        {
+          "IDmista": "108032060",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Školní",
+            "cisloDomovni": 280,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plasy",
+            "castObce": "Plasy",
+            "cisloObvoduPrahy": null,
+            "psc": "331 01",
+            "kodRUIAN": 695611,
+            "okres": "Plzeň-sever",
+            "uzemiDleORP": "CZ03206"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009815",
+      "izo": "107840359",
+      "name": "Střední škola, Kralovice, nám. Osvobození 32",
+      "address": {
+        "ulice": "nám. Osvobození",
+        "cisloDomovni": 32,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Kralovice",
+        "castObce": "Kralovice",
+        "cisloObvoduPrahy": null,
+        "psc": "331 41",
+        "kodRUIAN": 636843,
+        "okres": "CZ0325",
+        "uzemiDleORP": "CZ03206"
+      },
+      "locations": [
+        {
+          "IDmista": "107840359",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "nám. Osvobození",
+            "cisloDomovni": 32,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Kralovice",
+            "castObce": "Kralovice",
+            "cisloObvoduPrahy": null,
+            "psc": "331 41",
+            "kodRUIAN": 636843,
+            "okres": "Plzeň-sever",
+            "uzemiDleORP": "CZ03206"
+          }
+        },
+        {
+          "IDmista": "151026467",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Nádražní",
+            "cisloDomovni": 528,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Kralovice",
+            "castObce": "Kralovice",
+            "cisloObvoduPrahy": null,
+            "psc": "331 41",
+            "kodRUIAN": 640905,
+            "okres": "Plzeň-sever",
+            "uzemiDleORP": "CZ03206"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009831",
+      "izo": "000479322",
+      "name": "Gymnázium a Střední odborná škola, Rokycany, Mládežníků 1115",
+      "address": {
+        "ulice": "Mládežníků",
+        "cisloDomovni": 1115,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Rokycany",
+        "castObce": "Nové Město",
+        "cisloObvoduPrahy": null,
+        "psc": "337 01",
+        "kodRUIAN": 20780737,
+        "okres": "CZ0326",
+        "uzemiDleORP": "CZ03211"
+      },
+      "locations": [
+        {
+          "IDmista": "000479322",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Mládežníků",
+            "cisloDomovni": 1115,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Rokycany",
+            "castObce": "Nové Město",
+            "cisloObvoduPrahy": null,
+            "psc": "337 01",
+            "kodRUIAN": 20780737,
+            "okres": "Rokycany",
+            "uzemiDleORP": "CZ03211"
+          }
+        },
+        {
+          "IDmista": "108026841",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Svazu bojovníků za svobodu",
+            "cisloDomovni": 112,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Rokycany",
+            "castObce": "Střed",
+            "cisloObvoduPrahy": null,
+            "psc": "337 01",
+            "kodRUIAN": 20781679,
+            "okres": "Rokycany",
+            "uzemiDleORP": "CZ03211"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009858",
+      "izo": "018242171",
+      "name": "Střední škola, Rokycany, Jeřabinová 96/III",
+      "address": {
+        "ulice": "Jeřabinová",
+        "cisloDomovni": 96,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Rokycany",
+        "castObce": "Plzeňské Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "337 01",
+        "kodRUIAN": 20762089,
+        "okres": "CZ0326",
+        "uzemiDleORP": "CZ03211"
+      },
+      "locations": [
+        {
+          "IDmista": "181118319",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Mládežníků",
+            "cisloDomovni": 626,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Rokycany",
+            "castObce": "Nové Město",
+            "cisloObvoduPrahy": null,
+            "psc": "337 01",
+            "kodRUIAN": 26861607,
+            "okres": "Rokycany",
+            "uzemiDleORP": "CZ03211"
+          }
+        },
+        {
+          "IDmista": "018242171",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Jeřabinová",
+            "cisloDomovni": 96,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Rokycany",
+            "castObce": "Plzeňské Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "337 01",
+            "kodRUIAN": 20762089,
+            "okres": "Rokycany",
+            "uzemiDleORP": "CZ03211"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009947",
+      "izo": "102100675",
+      "name": "Gymnázium, Stříbro, Soběslavova 1426",
+      "address": {
+        "ulice": "Soběslavova",
+        "cisloDomovni": 1426,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Stříbro",
+        "castObce": "Stříbro",
+        "cisloObvoduPrahy": null,
+        "psc": "349 01",
+        "kodRUIAN": 15725804,
+        "okres": "CZ0327",
+        "uzemiDleORP": "CZ03213"
+      },
+      "locations": [
+        {
+          "IDmista": "102100675",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Soběslavova",
+            "cisloDomovni": 1426,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stříbro",
+            "castObce": "Stříbro",
+            "cisloObvoduPrahy": null,
+            "psc": "349 01",
+            "kodRUIAN": 15725804,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03213"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009955",
+      "izo": "000479021",
+      "name": "Gymnázium, Tachov, Pionýrská 1370",
+      "address": {
+        "ulice": "Pionýrská",
+        "cisloDomovni": 1370,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Tachov",
+        "castObce": "Tachov",
+        "cisloObvoduPrahy": null,
+        "psc": "347 01",
+        "kodRUIAN": 15705234,
+        "okres": "CZ0327",
+        "uzemiDleORP": "CZ03215"
+      },
+      "locations": [
+        {
+          "IDmista": "000479021",
+          "typ": "C51",
+          "adresa": {
+            "ulice": "Pionýrská",
+            "cisloDomovni": 1370,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Tachov",
+            "castObce": "Tachov",
+            "cisloObvoduPrahy": null,
+            "psc": "347 01",
+            "kodRUIAN": 15705234,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009963",
+      "izo": "110017501",
+      "name": "Střední škola, Bor, Plzeňská 231",
+      "address": {
+        "ulice": "Plzeňská",
+        "cisloDomovni": 231,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Bor",
+        "castObce": "Bor",
+        "cisloObvoduPrahy": null,
+        "psc": "348 02",
+        "kodRUIAN": 15592707,
+        "okres": "CZ0327",
+        "uzemiDleORP": "CZ03215"
+      },
+      "locations": [
+        {
+          "IDmista": "151026432",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Strážská",
+            "cisloDomovni": 441,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Bor",
+            "castObce": "Bor",
+            "cisloObvoduPrahy": null,
+            "psc": "348 02",
+            "kodRUIAN": 15594211,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        },
+        {
+          "IDmista": "151026441",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Strážská",
+            "cisloDomovni": 483,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Bor",
+            "castObce": "Bor",
+            "cisloObvoduPrahy": null,
+            "psc": "348 02",
+            "kodRUIAN": 15594637,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        },
+        {
+          "IDmista": "110017501",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Plzeňská",
+            "cisloDomovni": 231,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Bor",
+            "castObce": "Bor",
+            "cisloObvoduPrahy": null,
+            "psc": "348 02",
+            "kodRUIAN": 15592707,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009971",
+      "izo": "048326437",
+      "name": "Střední škola živnostenská a Základní škola, Planá",
+      "address": {
+        "ulice": "Kostelní",
+        "cisloDomovni": 129,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Planá",
+        "castObce": "Planá",
+        "cisloObvoduPrahy": null,
+        "psc": "348 15",
+        "kodRUIAN": 15651860,
+        "okres": "CZ0327",
+        "uzemiDleORP": "CZ03215"
+      },
+      "locations": [
+        {
+          "IDmista": "151024715",
+          "typ": "C21",
+          "adresa": {
+            "ulice": "Jateční",
+            "cisloDomovni": 562,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Planá",
+            "castObce": "Planá",
+            "cisloObvoduPrahy": null,
+            "psc": "348 15",
+            "kodRUIAN": 15656250,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        },
+        {
+          "IDmista": "151024707",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Bezdružická",
+            "cisloDomovni": 283,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Planá",
+            "castObce": "Planá",
+            "cisloObvoduPrahy": null,
+            "psc": "348 15",
+            "kodRUIAN": 15653421,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        },
+        {
+          "IDmista": "151024723",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Bezdružická",
+            "cisloDomovni": 728,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Planá",
+            "castObce": "Planá",
+            "cisloObvoduPrahy": null,
+            "psc": "348 15",
+            "kodRUIAN": 15657931,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        },
+        {
+          "IDmista": "048326437",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Kostelní",
+            "cisloDomovni": 129,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Planá",
+            "castObce": "Planá",
+            "cisloObvoduPrahy": null,
+            "psc": "348 15",
+            "kodRUIAN": 15651860,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        },
+        {
+          "IDmista": "181136384",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Zámecká",
+            "cisloDomovni": 853,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Planá",
+            "castObce": "Planá",
+            "cisloObvoduPrahy": null,
+            "psc": "348 15",
+            "kodRUIAN": 26866145,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600009980",
+      "izo": "000077348",
+      "name": "Střední odborná škola, Stříbro, Benešova 508",
+      "address": {
+        "ulice": "Benešova",
+        "cisloDomovni": 508,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Stříbro",
+        "castObce": "Stříbro",
+        "cisloObvoduPrahy": null,
+        "psc": "349 01",
+        "kodRUIAN": 15717038,
+        "okres": "CZ0327",
+        "uzemiDleORP": "CZ03213"
+      },
+      "locations": [
+        {
+          "IDmista": "000077348",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Benešova",
+            "cisloDomovni": 508,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stříbro",
+            "castObce": "Stříbro",
+            "cisloObvoduPrahy": null,
+            "psc": "349 01",
+            "kodRUIAN": 15717038,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03213"
+          }
+        },
+        {
+          "IDmista": "181138093",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Revoluční",
+            "cisloDomovni": 1431,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Stříbro",
+            "castObce": "Stříbro",
+            "cisloObvoduPrahy": null,
+            "psc": "349 01",
+            "kodRUIAN": 15725847,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03213"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600019675",
+      "izo": "110030966",
+      "name": "Střední zdravotnická škola a Vyšší odborná škola zdravotnická, Plzeň, Karlovarská 99",
+      "address": {
+        "ulice": "Karlovarská",
+        "cisloDomovni": 1210,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 99,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Bolevec",
+        "cisloObvoduPrahy": null,
+        "psc": "323 00",
+        "kodRUIAN": 24426717,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "110030966",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Karlovarská",
+            "cisloDomovni": 1210,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 99,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Bolevec",
+            "cisloObvoduPrahy": null,
+            "psc": "323 00",
+            "kodRUIAN": 24426717,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600022765",
+      "izo": "000574961",
+      "name": "Základní škola a Odborná škola, Horšovský Týn, Nádražní 89",
+      "address": {
+        "ulice": "Nádražní",
+        "cisloDomovni": 89,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Horšovský Týn",
+        "castObce": "Velké Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "346 01",
+        "kodRUIAN": 6772421,
+        "okres": "CZ0321",
+        "uzemiDleORP": "CZ03204"
+      },
+      "locations": [
+        {
+          "IDmista": "000574961",
+          "typ": "C21",
+          "adresa": {
+            "ulice": "K terénu",
+            "cisloDomovni": 64,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Plzeňské Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6770819,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "181050986",
+          "typ": "C21",
+          "adresa": {
+            "ulice": "Masarykova",
+            "cisloDomovni": 287,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Poběžovice",
+            "castObce": "Poběžovice",
+            "cisloObvoduPrahy": null,
+            "psc": "345 22",
+            "kodRUIAN": 6845452,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        },
+        {
+          "IDmista": "181050978",
+          "typ": "C21",
+          "adresa": {
+            "ulice": "K terénu",
+            "cisloDomovni": 65,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Plzeňské Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6770827,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600022986",
+      "izo": "049774859",
+      "name": "Odborná škola výroby a služeb, Plzeň, Vejprnická 56",
+      "address": {
+        "ulice": "Vejprnická",
+        "cisloDomovni": 663,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 56,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Skvrňany",
+        "cisloObvoduPrahy": null,
+        "psc": "318 00",
+        "kodRUIAN": 24562106,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "049774859",
+          "typ": "C21",
+          "adresa": {
+            "ulice": "Vejprnická",
+            "cisloDomovni": 663,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 56,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24562106,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600022994",
+      "izo": "181077639",
+      "name": "Základní škola speciální a Praktická škola Diakonie ČCE Merklín",
+      "address": {
+        "ulice": "Husova",
+        "cisloDomovni": 346,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Merklín",
+        "castObce": "Merklín",
+        "cisloObvoduPrahy": null,
+        "psc": "334 52",
+        "kodRUIAN": 904961,
+        "okres": "CZ0324",
+        "uzemiDleORP": "CZ03210"
+      },
+      "locations": [
+        {
+          "IDmista": "250015633",
+          "typ": "C16",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 191,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Žinkovy",
+            "castObce": "Žinkovy",
+            "cisloObvoduPrahy": null,
+            "psc": "335 54",
+            "kodRUIAN": 7062605,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03207"
+          }
+        },
+        {
+          "IDmista": "181077639",
+          "typ": "C41",
+          "adresa": {
+            "ulice": "Husova",
+            "cisloDomovni": 346,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Merklín",
+            "castObce": "Merklín",
+            "cisloObvoduPrahy": null,
+            "psc": "334 52",
+            "kodRUIAN": 904961,
+            "okres": "Plzeň-jih",
+            "uzemiDleORP": "CZ03210"
+          }
+        },
+        {
+          "IDmista": "181077671",
+          "typ": "C41",
+          "adresa": {
+            "ulice": "Pod Nemocnicí",
+            "cisloDomovni": 116,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Sušice",
+            "castObce": "Sušice III",
+            "cisloObvoduPrahy": null,
+            "psc": "342 01",
+            "kodRUIAN": 7019483,
+            "okres": "Klatovy",
+            "uzemiDleORP": "CZ03214"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600023036",
+      "izo": "108032019",
+      "name": "Odborná škola, Základní škola a Mateřská škola, Plzeň, Macháčkova 45",
+      "address": {
+        "ulice": "Macháčkova",
+        "cisloDomovni": 905,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 45,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Skvrňany",
+        "cisloObvoduPrahy": null,
+        "psc": "318 00",
+        "kodRUIAN": 24564745,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "181075229",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Rabštejnská",
+            "cisloDomovni": 1618,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 29,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Bolevec",
+            "cisloObvoduPrahy": null,
+            "psc": "323 00",
+            "kodRUIAN": 24430951,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "181042053",
+          "typ": "C21",
+          "adresa": {
+            "ulice": "Macháčkova",
+            "cisloDomovni": 906,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 47,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24564753,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "181148170",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Vojanova",
+            "cisloDomovni": 1029,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 22,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24566055,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "108032019",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Macháčkova",
+            "cisloDomovni": 905,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 45,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24564745,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600028429",
+      "izo": "150069685",
+      "name": "Výchovný ústav, dětský domov se školou, základní škola, střední škola a školní jídelna, Hostouň, Chodské náměstí 131",
+      "address": {
+        "ulice": "Chodské náměstí",
+        "cisloDomovni": 131,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Hostouň",
+        "castObce": "Hostouň",
+        "cisloObvoduPrahy": null,
+        "psc": "345 25",
+        "kodRUIAN": 6780491,
+        "okres": "CZ0321",
+        "uzemiDleORP": "CZ03202"
+      },
+      "locations": [
+        {
+          "IDmista": "150069685",
+          "typ": "C23",
+          "adresa": {
+            "ulice": "Chodské náměstí",
+            "cisloDomovni": 131,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Hostouň",
+            "castObce": "Hostouň",
+            "cisloObvoduPrahy": null,
+            "psc": "345 25",
+            "kodRUIAN": 6780491,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03202"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600028747",
+      "izo": "110034791",
+      "name": "Výchovný ústav, střední škola a základní škola Terešov, příspěvková organizace",
+      "address": {
+        "ulice": null,
+        "cisloDomovni": 1,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Terešov",
+        "castObce": "Terešov",
+        "cisloObvoduPrahy": null,
+        "psc": "338 08",
+        "kodRUIAN": 13008404,
+        "okres": "CZ0326",
+        "uzemiDleORP": "CZ03211"
+      },
+      "locations": [
+        {
+          "IDmista": "110034791",
+          "typ": "C13",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 1,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": "",
+            "obec": "Terešov",
+            "castObce": "Terešov",
+            "cisloObvoduPrahy": null,
+            "psc": "338 08",
+            "kodRUIAN": 13008404,
+            "okres": "Rokycany",
+            "uzemiDleORP": "CZ03211"
+          }
+        },
+        {
+          "IDmista": "181046059",
+          "typ": "C13",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 112,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": "",
+            "obec": "Terešov",
+            "castObce": "Terešov",
+            "cisloObvoduPrahy": null,
+            "psc": "338 08",
+            "kodRUIAN": 13009354,
+            "okres": "Rokycany",
+            "uzemiDleORP": "CZ03211"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600170454",
+      "izo": "000376469",
+      "name": "Střední odborná škola a Střední odborné učiliště, Horšovský Týn, Littrowa 122",
+      "address": {
+        "ulice": "Jana Littrowa",
+        "cisloDomovni": 122,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Horšovský Týn",
+        "castObce": "Velké Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "346 01",
+        "kodRUIAN": 6772757,
+        "okres": "CZ0321",
+        "uzemiDleORP": "CZ03204"
+      },
+      "locations": [
+        {
+          "IDmista": "000376469",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Jana Littrowa",
+            "cisloDomovni": 122,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Velké Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6772757,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "151025398",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Nádražní",
+            "cisloDomovni": 43,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Velké Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6771971,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "181087936",
+          "typ": "C11",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 1,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Horšov",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6778691,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "181087928",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Nádražní",
+            "cisloDomovni": 167,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Velké Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6773206,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "151025444",
+          "typ": "C10",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 62,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Horšov",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 40385612,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "151025401",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Nádražní",
+            "cisloDomovni": 76,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Velké Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6772293,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "151025436",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Dr. E. Beneše",
+            "cisloDomovni": 6,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Malé Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6774750,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        },
+        {
+          "IDmista": "181004585",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Nádražní",
+            "cisloDomovni": 156,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Horšovský Týn",
+            "castObce": "Velké Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "346 01",
+            "kodRUIAN": 6773095,
+            "okres": "Domažlice",
+            "uzemiDleORP": "CZ03204"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600170501",
+      "izo": "000523925",
+      "name": "Integrovaná střední škola živnostenská, Plzeň, Škroupova 13",
+      "address": {
+        "ulice": "Škroupova",
+        "cisloDomovni": 209,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 13,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24531553,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "151025631",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Křimická",
+            "cisloDomovni": 862,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 3,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24564281,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "000523925",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Škroupova",
+            "cisloDomovni": 209,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 13,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24531553,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "600170535",
+      "izo": "000520110",
+      "name": "Střední průmyslová škola, Tachov, Světce 1",
+      "address": {
+        "ulice": null,
+        "cisloDomovni": 1,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": null,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Tachov",
+        "castObce": "Světce",
+        "cisloObvoduPrahy": null,
+        "psc": "347 01",
+        "kodRUIAN": 15694461,
+        "okres": "CZ0327",
+        "uzemiDleORP": "CZ03215"
+      },
+      "locations": [
+        {
+          "IDmista": "000520110",
+          "typ": "C31",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 1,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Tachov",
+            "castObce": "Světce",
+            "cisloObvoduPrahy": null,
+            "psc": "347 01",
+            "kodRUIAN": 15694461,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        },
+        {
+          "IDmista": "151024481",
+          "typ": "C11",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 81,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Tachov",
+            "castObce": "Oldřichov",
+            "cisloObvoduPrahy": null,
+            "psc": "347 01",
+            "kodRUIAN": 74638050,
+            "okres": "Tachov",
+            "uzemiDleORP": "CZ03215"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "610100530",
+      "izo": "110100549",
+      "name": "Střední průmyslová škola dopravní, Plzeň, Karlovarská 99",
+      "address": {
+        "ulice": "Karlovarská",
+        "cisloDomovni": 1210,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 99,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Bolevec",
+        "cisloObvoduPrahy": null,
+        "psc": "323 00",
+        "kodRUIAN": 24426717,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "110100549",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Karlovarská",
+            "cisloDomovni": 1210,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 99,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Bolevec",
+            "cisloObvoduPrahy": null,
+            "psc": "323 00",
+            "kodRUIAN": 24426717,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "181137445",
+          "typ": "C10",
+          "adresa": {
+            "ulice": null,
+            "cisloDomovni": 528,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": null,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Losiná",
+            "castObce": "Losiná",
+            "cisloObvoduPrahy": null,
+            "psc": "332 04",
+            "kodRUIAN": 85227391,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151024740",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Průkopníků",
+            "cisloDomovni": 290,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 9,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Křimice",
+            "cisloObvoduPrahy": null,
+            "psc": "322 00",
+            "kodRUIAN": 24412635,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "610100581",
+      "izo": "110100590",
+      "name": "Střední odborné učiliště elektrotechnické, Plzeň, Vejprnická 56",
+      "address": {
+        "ulice": "Vejprnická",
+        "cisloDomovni": 663,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 56,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Skvrňany",
+        "cisloObvoduPrahy": null,
+        "psc": "318 00",
+        "kodRUIAN": 24562106,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "151024669",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Průmyslová",
+            "cisloDomovni": 554,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 4,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Doudlevce",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 25264222,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151024642",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Chebská",
+            "cisloDomovni": 241,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 35,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Křimice",
+            "cisloObvoduPrahy": null,
+            "psc": "322 00",
+            "kodRUIAN": 24412121,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "110100590",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Vejprnická",
+            "cisloDomovni": 663,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 56,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Skvrňany",
+            "cisloObvoduPrahy": null,
+            "psc": "318 00",
+            "kodRUIAN": 24562106,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "610100645",
+      "izo": "110100662",
+      "name": "Střední průmyslová škola strojnická a Střední odborná škola profesora Švejcara, Plzeň, Klatovská 109",
+      "address": {
+        "ulice": "Klatovská třída",
+        "cisloDomovni": 1615,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 109,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24544833,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "110100522",
+          "typ": "C31",
+          "adresa": {
+            "ulice": "Majerova",
+            "cisloDomovni": 1615,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 1,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24544868,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "151029415",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Tylova",
+            "cisloDomovni": 1,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 57,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 40332799,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        },
+        {
+          "IDmista": "110100662",
+          "typ": "C11",
+          "adresa": {
+            "ulice": "Klatovská třída",
+            "cisloDomovni": 1615,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 109,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24544833,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "691005648",
+      "izo": "181121379",
+      "name": "Waldorfská základní škola a střední škola Dobromysl z.ú.",
+      "address": {
+        "ulice": "Husova",
+        "cisloDomovni": 1126,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 43,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Jižní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24541052,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "181121379",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Husova",
+            "cisloDomovni": 1126,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 43,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Jižní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24541052,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    },
+    {
+      "redizo": "691018197",
+      "izo": "181146371",
+      "name": "Střední škola Montessori Plzeň",
+      "address": {
+        "ulice": "Karlovarská",
+        "cisloDomovni": 585,
+        "typCislaDomovniho": "č.p.",
+        "cisloOrientacni": 48,
+        "dodatekOrientacnihoCisla": null,
+        "obec": "Plzeň",
+        "castObce": "Severní Předměstí",
+        "cisloObvoduPrahy": null,
+        "psc": "301 00",
+        "kodRUIAN": 24481688,
+        "okres": "CZ0323",
+        "uzemiDleORP": "CZ03209"
+      },
+      "locations": [
+        {
+          "IDmista": "181146371",
+          "typ": "C10",
+          "adresa": {
+            "ulice": "Karlovarská",
+            "cisloDomovni": 585,
+            "typCislaDomovniho": "č.p.",
+            "cisloOrientacni": 48,
+            "dodatekOrientacnihoCisla": null,
+            "obec": "Plzeň",
+            "castObce": "Severní Předměstí",
+            "cisloObvoduPrahy": null,
+            "psc": "301 00",
+            "kodRUIAN": 24481688,
+            "okres": "Plzeň-město",
+            "uzemiDleORP": "CZ03209"
+          }
+        }
+      ]
+    }
+  ]
+}

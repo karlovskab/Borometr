@@ -1,0 +1,440 @@
+{
+  "id": "LC09_L2SP_192026_20250812_02_T1",
+  "bbox": [
+    11.43677995791542,
+    47.73588525718913,
+    14.785258895633284,
+    49.96456474281087
+  ],
+  "type": "Feature",
+  "links": [
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/"
+    },
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC09_L2SP_192026_20250812_02_T1"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.5066/P9OGBGM6",
+      "title": "Landsat 8-9 OLI/TIRS Collection 2 Level-2"
+    },
+    {
+      "rel": "via",
+      "href": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC09_L2SP_192026_20250812_20250815_02_T1_SR",
+      "type": "application/json",
+      "title": "USGS STAC Item"
+    },
+    {
+      "rel": "via",
+      "href": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-st/items/LC09_L2SP_192026_20250812_20250815_02_T1_ST",
+      "type": "application/json",
+      "title": "USGS STAC Item"
+    },
+    {
+      "rel": "preview",
+      "href": "https://planetarycomputer.microsoft.com/api/data/v1/item/map?collection=landsat-c2-l2&item=LC09_L2SP_192026_20250812_02_T1",
+      "title": "Map of item",
+      "type": "text/html"
+    }
+  ],
+  "assets": {
+    "lwir11": {
+      "href": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2025/192/026/LC09_L2SP_192026_20250812_20250815_02_T1/LC09_L2SP_192026_20250812_20250815_02_T1_ST_B10.TIF",
+      "gsd": 100,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "temperature"
+      ],
+      "title": "Surface Temperature Band",
+      "eo:bands": [
+        {
+          "name": "TIRS_B10",
+          "common_name": "lwir11",
+          "description": "Long-wave infrared",
+          "center_wavelength": 10.9,
+          "full_width_half_max": 0.59
+        }
+      ],
+      "description": "Collection 2 Level-2 Thermal Infrared Band (ST_B10) Surface Temperature",
+      "raster:bands": [
+        {
+          "unit": "kelvin",
+          "scale": 0.00341802,
+          "nodata": 0,
+          "offset": 149,
+          "data_type": "uint16",
+          "spatial_resolution": 30
+        }
+      ]
+    },
+    "qa_pixel": {
+      "href": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/oli-tirs/2025/192/026/LC09_L2SP_192026_20250812_20250815_02_T1/LC09_L2SP_192026_20250812_20250815_02_T1_QA_PIXEL.TIF",
+      "classification:bitfields": [
+        {
+          "name": "fill",
+          "length": 1,
+          "offset": 0,
+          "classes": [
+            {
+              "name": "not_fill",
+              "value": 0,
+              "description": "Image data"
+            },
+            {
+              "name": "fill",
+              "value": 1,
+              "description": "Fill data"
+            }
+          ],
+          "description": "Image or fill data"
+        },
+        {
+          "name": "dilated_cloud",
+          "length": 1,
+          "offset": 1,
+          "classes": [
+            {
+              "name": "not_dilated",
+              "value": 0,
+              "description": "Cloud is not dilated or no cloud"
+            },
+            {
+              "name": "dilated",
+              "value": 1,
+              "description": "Cloud dilation"
+            }
+          ],
+          "description": "Dilated cloud"
+        },
+        {
+          "name": "cirrus",
+          "length": 1,
+          "offset": 2,
+          "classes": [
+            {
+              "name": "not_cirrus",
+              "value": 0,
+              "description": "Cirrus confidence is not high"
+            },
+            {
+              "name": "cirrus",
+              "value": 1,
+              "description": "High confidence cirrus"
+            }
+          ],
+          "description": "Cirrus mask"
+        },
+        {
+          "name": "cloud",
+          "length": 1,
+          "offset": 3,
+          "classes": [
+            {
+              "name": "not_cloud",
+              "value": 0,
+              "description": "Cloud confidence is not high"
+            },
+            {
+              "name": "cloud",
+              "value": 1,
+              "description": "High confidence cloud"
+            }
+          ],
+          "description": "Cloud mask"
+        },
+        {
+          "name": "cloud_shadow",
+          "length": 1,
+          "offset": 4,
+          "classes": [
+            {
+              "name": "not_shadow",
+              "value": 0,
+              "description": "Cloud shadow confidence is not high"
+            },
+            {
+              "name": "shadow",
+              "value": 1,
+              "description": "High confidence cloud shadow"
+            }
+          ],
+          "description": "Cloud shadow mask"
+        },
+        {
+          "name": "snow",
+          "length": 1,
+          "offset": 5,
+          "classes": [
+            {
+              "name": "not_snow",
+              "value": 0,
+              "description": "Snow/Ice confidence is not high"
+            },
+            {
+              "name": "snow",
+              "value": 1,
+              "description": "High confidence snow cover"
+            }
+          ],
+          "description": "Snow/Ice mask"
+        },
+        {
+          "name": "clear",
+          "length": 1,
+          "offset": 6,
+          "classes": [
+            {
+              "name": "not_clear",
+              "value": 0,
+              "description": "Cloud or dilated cloud bits are set"
+            },
+            {
+              "name": "clear",
+              "value": 1,
+              "description": "Cloud and dilated cloud bits are not set"
+            }
+          ],
+          "description": "Clear mask"
+        },
+        {
+          "name": "water",
+          "length": 1,
+          "offset": 7,
+          "classes": [
+            {
+              "name": "not_water",
+              "value": 0,
+              "description": "Land or cloud"
+            },
+            {
+              "name": "water",
+              "value": 1,
+              "description": "Water"
+            }
+          ],
+          "description": "Water mask"
+        },
+        {
+          "name": "cloud_confidence",
+          "length": 2,
+          "offset": 8,
+          "classes": [
+            {
+              "name": "not_set",
+              "value": 0,
+              "description": "No confidence level set"
+            },
+            {
+              "name": "low",
+              "value": 1,
+              "description": "Low confidence cloud"
+            },
+            {
+              "name": "medium",
+              "value": 2,
+              "description": "Medium confidence cloud"
+            },
+            {
+              "name": "high",
+              "value": 3,
+              "description": "High confidence cloud"
+            }
+          ],
+          "description": "Cloud confidence levels"
+        },
+        {
+          "name": "cloud_shadow_confidence",
+          "length": 2,
+          "offset": 10,
+          "classes": [
+            {
+              "name": "not_set",
+              "value": 0,
+              "description": "No confidence level set"
+            },
+            {
+              "name": "low",
+              "value": 1,
+              "description": "Low confidence cloud shadow"
+            },
+            {
+              "name": "reserved",
+              "value": 2,
+              "description": "Reserved - value not used"
+            },
+            {
+              "name": "high",
+              "value": 3,
+              "description": "High confidence cloud shadow"
+            }
+          ],
+          "description": "Cloud shadow confidence levels"
+        },
+        {
+          "name": "snow_confidence",
+          "length": 2,
+          "offset": 12,
+          "classes": [
+            {
+              "name": "not_set",
+              "value": 0,
+              "description": "No confidence level set"
+            },
+            {
+              "name": "low",
+              "value": 1,
+              "description": "Low confidence snow/ice"
+            },
+            {
+              "name": "reserved",
+              "value": 2,
+              "description": "Reserved - value not used"
+            },
+            {
+              "name": "high",
+              "value": 3,
+              "description": "High confidence snow/ice"
+            }
+          ],
+          "description": "Snow/Ice confidence levels"
+        },
+        {
+          "name": "cirrus_confidence",
+          "length": 2,
+          "offset": 14,
+          "classes": [
+            {
+              "name": "not_set",
+              "value": 0,
+              "description": "No confidence level set"
+            },
+            {
+              "name": "low",
+              "value": 1,
+              "description": "Low confidence cirrus"
+            },
+            {
+              "name": "reserved",
+              "value": 2,
+              "description": "Reserved - value not used"
+            },
+            {
+              "name": "high",
+              "value": 3,
+              "description": "High confidence cirrus"
+            }
+          ],
+          "description": "Cirrus confidence levels"
+        }
+      ],
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "cloud",
+        "cloud-shadow",
+        "snow-ice",
+        "water-mask"
+      ],
+      "title": "Pixel Quality Assessment Band",
+      "description": "Collection 2 Level-1 Pixel Quality Assessment Band (QA_PIXEL)",
+      "raster:bands": [
+        {
+          "unit": "bit index",
+          "nodata": 1,
+          "data_type": "uint16",
+          "spatial_resolution": 30
+        }
+      ]
+    }
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          12.2404000573322,
+          49.92546673414818
+        ],
+        [
+          11.58996894563063,
+          48.221608196827894
+        ],
+        [
+          14.016998984754986,
+          47.78943455312095
+        ],
+        [
+          14.750988811338049,
+          49.48717674912367
+        ],
+        [
+          12.2404000573322,
+          49.92546673414818
+        ]
+      ]
+    ]
+  },
+  "collection": "landsat-c2-l2",
+  "properties": {
+    "gsd": 30,
+    "created": "2025-08-17T09:16:59.541354Z",
+    "sci:doi": "10.5066/P9OGBGM6",
+    "datetime": "2025-08-12T09:57:37.247353Z",
+    "platform": "landsat-9",
+    "proj:epsg": 32633,
+    "proj:shape": [
+      8071,
+      7991
+    ],
+    "description": "Landsat Collection 2 Level-2",
+    "instruments": [
+      "oli",
+      "tirs"
+    ],
+    "eo:cloud_cover": 0.02,
+    "proj:transform": [
+      30.0,
+      0.0,
+      244185.0,
+      0.0,
+      -30.0,
+      5534715.0
+    ],
+    "view:off_nadir": 0,
+    "landsat:wrs_row": "026",
+    "landsat:scene_id": "LC91920262025224LGN00",
+    "landsat:wrs_path": "192",
+    "landsat:wrs_type": "2",
+    "view:sun_azimuth": 149.26225971,
+    "landsat:correction": "L2SP",
+    "view:sun_elevation": 52.6610752,
+    "landsat:cloud_cover_land": 0.02,
+    "landsat:collection_number": "02",
+    "landsat:collection_category": "T1"
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://landsat.usgs.gov/stac/landsat-extension/v1.1.1/schema.json",
+    "https://stac-extensions.github.io/classification/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
+  ],
+  "stac_version": "1.0.0"
+}
