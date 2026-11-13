@@ -1,5 +1,8 @@
 const $=s=>document.querySelector(s),fmt=(n,d=2)=>n.toLocaleString('cs-CZ',{minimumFractionDigits:d,maximumFractionDigits:d});
 let rows=[],metric='prumer_C',year=2025,place='both',mode='air',map,circles=[],labels=[],weather=[],busy=false;
+const WEATHER_REFRESH_MS = 15 * 60 * 1000;
+let weatherFetchedAt = null;
+let weatherFetchFailed = false;
 const places=[{id:'school',name:'Hlavní škola',address:'Plzeňská 231',lat:49.7108382,lon:12.7771834,color:'#176c50'},{id:'ov',name:'Pracoviště OV',address:'Strážská 483',lat:49.7080373,lon:12.7789787,color:'#98622c'}];
 function chart(){if(!rows.length)return;let vals=rows.map(r=>r[metric]),base=vals.slice(0,5).reduce((a,b)=>a+b)/5,min=metric==='tropicke_dny'?0:Math.floor(Math.min(...vals)-.5),max=Math.ceil(Math.max(...vals)+.5),Y=v=>215-(v-min)/(max-min)*180;
 let s='';for(let i=0;i<5;i++){let v=min+(max-min)*i/4;s+=`<line x1="40" y1="${Y(v)}" x2="605" y2="${Y(v)}" stroke="#edf0e8"/><text x="32" y="${Y(v)+4}" text-anchor="end">${fmt(v,metric==='tropicke_dny'?0:1)}</text>`}
@@ -9,10 +12,127 @@ function updateYear(){const r=rows.find(r=>r.rok===year);if(!r)return;$('#annual
 function color(t){return t<0?'#7cadd1':t<10?'#75bc9b':t<20?'#d4c780':t<30?'#d49a63':'#ce7150'}
 function drawMap(fit=false){if(!map)return;circles.forEach(x=>map.removeLayer(x));labels.forEach(x=>map.removeLayer(x));circles=[];labels=[];const shown=places.filter(p=>place==='both'||p.id===place);shown.forEach(p=>{const w=weather.find(w=>w.id===p.id);circles.push(L.circle([p.lat,p.lon],{radius:1000,color:p.color,weight:2,dashArray:p.id==='ov'?'6 5':null,fillColor:w&&mode==='air'?color(w.temp):p.color,fillOpacity:mode==='air'&&w?.temp!=null?.18:.035}).addTo(map));const marker=L.marker([p.lat,p.lon],{icon:L.divIcon({className:'livepoint',html:`${p.id==='school'?'Š':'OV'}${w&&mode==='air'?` · ${fmt(w.temp,1)} °C`:''}`})}).addTo(map);marker.bindPopup(`<b>${p.name}</b><br>${p.address}<br>Poloměr: 1 000 m${w?`<br>Vzduch: ${fmt(w.temp,1)} °C<br>Modelový čas: ${w.time.replace('T',' ')}`:''}`);labels.push(marker)});if(fit)map.fitBounds(L.featureGroup(circles).getBounds(),{padding:[20,20]});$('#mapTitle').textContent=place==='both'?'Škola a OV · dva okruhy do 1 000 m':`${shown[0].name} · okolí do 1 000 m`}
 function initMap(){if(!window.L){$('#map').innerHTML='<p style="padding:25px">Mapový podklad se nepodařilo načíst. Zkontrolujte připojení a obnovte stránku.</p>';return}map=L.map('map',{scrollWheelZoom:false}).setView([49.7095,12.778],14);const tile=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © Esri and contributors'}).addTo(map);let errors=0;tile.on('tileerror',()=>{if(++errors===3)$('#mapStatus').textContent='Mapové dlaždice nedostupné; okruhy zůstávají zobrazeny.'});L.control.scale({imperial:false}).addTo(map);drawMap(true)}
-async function refresh(){if(busy)return;busy=true;$('#refresh').disabled=true;$('#liveTime').textContent='Aktualizuji modelová data…';try{const q=new URLSearchParams({latitude:places.map(p=>p.lat).join(','),longitude:places.map(p=>p.lon).join(','),current:'temperature_2m',timezone:'Europe/Prague',forecast_days:'1'});const r=await fetch('https://api.open-meteo.com/v1/forecast?'+q,{signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(!Array.isArray(j)||j.length!==2)throw Error('Neplatná odpověď');weather=j.map((x,i)=>{if(!Number.isFinite(x.current?.temperature_2m))throw Error('Chybí teplota');return{id:places[i].id,temp:x.current.temperature_2m,time:x.current.time,grid:[x.latitude,x.longitude]}});$('#current').innerHTML=`${fmt(weather[0].temp,1)} <span style="font-size:20px">°C</span>`;$('#liveTime').textContent=`Čas modelu: ${weather[0].time.replace('T',' ')} (Praha). Obnova po 15 min.`;$('#mapStatus').textContent='Připojeno · Open-Meteo';drawMap()}catch(e){$('#liveTime').textContent=weather.length?'Obnova selhala. Zobrazeny starší hodnoty; čas modelu '+weather[0].time.replace('T',' '):'Aktuální data nejsou dostupná. Zkuste Obnovit.';$('#mapStatus').textContent='Počasí nedostupné'+(weather.length?' · starší hodnoty':'')}finally{busy=false;$('#refresh').disabled=false}}
+function formatWeatherTime(timestamp) {
+  return new Intl.DateTimeFormat('cs-CZ', {
+    timeZone: 'Europe/Prague', day: 'numeric', month: 'numeric', year: 'numeric',
+    hour: '2-digit', minute: '2-digit'
+  }).format(new Date(timestamp));
+}
+
+function weatherIsStale(reading) {
+  if (!reading) return false;
+  return weatherFetchFailed || Date.now() - reading.validAt > 45 * 60 * 1000 ||
+    (weatherFetchedAt !== null && Date.now() - weatherFetchedAt > 30 * 60 * 1000);
+}
+
+function syncMapPresentation() {
+  const live = $('#cityLayer').value === 'off';
+  $('#liveMapReadings').hidden = !live;
+  document.querySelector('.landscapeDashboard').hidden = !['detail', 'ndvi'].includes($('#cityLayer').value);
+  $('#thermalDate').closest('label').hidden = live;
+  $('#thermalOpacity').closest('label').hidden = live;
+  if (live) {
+    $('#detailReadout').hidden = true;
+    $('#thermalInfo').hidden = true;
+    $('#mapTitle').textContent = 'Aktuální teplota vzduchu · škola a OV · Open-Meteo';
+    $('#mapNote').textContent = 'Teplotní štítky a kruhy ukazují současný modelový odhad vzduchu u školy a OV. Obě blízká místa mohou mít shodnou hodnotu. Čas platnosti je uveden přímo u teplot. Pro měření místního mikroklimatu potřebujeme čidla.';
+    $('#air').classList.add('active');
+    $('#surface').classList.remove('active');
+    const ramp = document.querySelector('.mapkey > span');
+    if (ramp) ramp.hidden = true;
+  }
+}
+
+function liveWeatherPopup(placeInfo, reading) {
+  const title = `<b>${placeInfo.name}</b><br>${placeInfo.address}`;
+  if (!reading) return title + '<br>Aktuální údaj se načítá nebo je nedostupný.';
+  return title + `<br><b>${fmt(reading.temp, 1)} °C · vzduch</b>` +
+    `<br>${weatherIsStale(reading) ? 'Starší údaj' : 'Platnost modelu'} ${reading.time} (Praha)` +
+    `<br>Staženo ${formatWeatherTime(weatherFetchedAt)} (Praha)` +
+    `<br>Zdroj Open-Meteo · modelový odhad ve 2 m` +
+    `<br>Vrácený modelový bod ${fmt(reading.grid[0], 4)}, ${fmt(reading.grid[1], 4)}`;
+}
+
+function renderLiveMapReadings() {
+  syncMapPresentation();
+  if ($('#cityLayer').value !== 'off') return;
+  const grid = $('#liveMapReadings');
+  grid.innerHTML = places.map(placeInfo => {
+    const reading = weather.find(item => item.id === placeInfo.id);
+    const stale = weatherIsStale(reading);
+    const status = !reading ? (busy ? 'Načítám aktuální údaje…' : 'Data nyní nejsou dostupná') :
+      `${stale ? 'Starší údaj · platnost' : 'Platnost'} ${reading.time} (Praha)`;
+    return `<article class="liveReading"><h3>${placeInfo.name}</h3>` +
+      `<div class="small">${placeInfo.address}</div>` +
+      `<strong>${reading ? fmt(reading.temp, 1) + ' °C' : '—'}</strong>` +
+      `<div class="small ${stale ? 'warning' : ''}">${status}</div>` +
+      `<div class="small">${reading ? 'Staženo ' + formatWeatherTime(weatherFetchedAt) + ' · ' : ''}` +
+      `Vzduch ve 2 m · Open-Meteo</div></article>`;
+  }).join('');
+}
+
+async function refresh() {
+  if (busy) return;
+  busy = true;
+  $('#refresh').disabled = true;
+  $('#liveTime').textContent = 'Aktualizuji modelová data…';
+  try {
+    const query = new URLSearchParams({
+      latitude: places.map(point => point.lat).join(','),
+      longitude: places.map(point => point.lon).join(','),
+      current: 'temperature_2m', timezone: 'Europe/Prague',
+      timeformat: 'unixtime', forecast_days: '1'
+    });
+    const response = await fetch('https://api.open-meteo.com/v1/forecast?' + query, {
+      cache: 'no-store', signal: AbortSignal.timeout(15000)
+    });
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const payload = await response.json();
+    if (!Array.isArray(payload) || payload.length !== places.length) throw new Error('Neplatná odpověď');
+    const nextReadings = payload.map((item, index) => {
+      if (!Number.isFinite(item.current?.temperature_2m) || !Number.isFinite(item.current?.time) ||
+          !Number.isFinite(item.latitude) || !Number.isFinite(item.longitude)) {
+        throw new Error('Chybí teplota, čas nebo modelový bod');
+      }
+      const validAt = item.current.time * 1000;
+      return {
+        id: places[index].id, temp: item.current.temperature_2m,
+        validAt, time: formatWeatherTime(validAt), grid: [item.latitude, item.longitude]
+      };
+    });
+    weather = nextReadings;
+    weatherFetchedAt = Date.now();
+    weatherFetchFailed = false;
+  } catch (error) {
+    weatherFetchFailed = true;
+  } finally {
+    busy = false;
+    $('#refresh').disabled = false;
+    const schoolReading = weather.find(item => item.id === 'school');
+    if (schoolReading) {
+      $('#current').innerHTML = `${fmt(schoolReading.temp, 1)} <span style="font-size:20px">°C</span>`;
+      $('#liveTime').textContent = `${weatherIsStale(schoolReading) ? 'Starší údaj · ' : ''}` +
+        `Platnost ${schoolReading.time} (Praha). Obnova po 15 min.`;
+    } else {
+      $('#liveTime').textContent = 'Aktuální data nejsou dostupná. Zkuste Obnovit.';
+    }
+    $('#mapStatus').textContent = weatherFetchFailed ?
+      (weather.length ? 'Obnova selhala · starší modelové údaje' : 'Počasí nedostupné') :
+      (weather.some(weatherIsStale) ? 'Open-Meteo · starší modelové údaje' : 'Připojeno · Open-Meteo');
+    drawMap();
+  }
+}
 document.querySelectorAll('.place').forEach(b=>b.onclick=()=>{place=b.dataset.place;document.querySelectorAll('.place').forEach(x=>x.classList.toggle('active',x===b));drawMap(true)});document.querySelectorAll('.metric').forEach(b=>b.onclick=()=>{metric=b.dataset.metric;document.querySelectorAll('.metric').forEach(x=>x.classList.toggle('active',x===b));chart()});$('#yearSlider').oninput=e=>{year=+e.target.value;updateYear()};$('#refresh').onclick=refresh;
 function setMode(m){mode=m;$('#air').classList.toggle('active',m==='air');$('#surface').classList.toggle('active',m==='surface');$('#mapNote').innerHTML=m==='air'?'Barevné štítky ukazují aktuální modelovou teplotu vzduchu u školy a OV. Oranžové půdorysy označují jejich budovy, zelené plochy mapovanou zeleň. Model nemusí prostorově rozlišit obě blízká pracoviště.':'<b>Družicová teplota povrchu zatím není napojena.</b> Mapa zobrazuje pouze sledované okruhy. Pro historické i aktuální povrchové mapy je potřeba zpracovat bezoblačné snímky Landsat. Datum snímku musí být vždy uvedeno; nejde o živý teploměr.';drawMap()};$('#air').onclick=()=>setMode('air');$('#surface').onclick=()=>setMode('surface');$('#download').onclick=()=>{const blob=new Blob([JSON.stringify({source:'Open-Meteo / Copernicus ECMWF ERA5-Land',scope:'Oblast Boru, nikoli průměr okruhů 1000 m',requested_point:[49.711,12.776],grid_point:[49.699997,12.800003],annual:rows},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Bor_teploty_2016_2025.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
-fetch('annual.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(j=>{rows=j.filter(r=>r.rok>=2016);$('#dataTable').innerHTML=rows.map(r=>`<tr><td>${r.rok}</td><td>${fmt(r.prumer_C)}</td><td>${fmt(r.leto_C)}</td><td>${r.tropicke_dny}</td></tr>`).join('');updateYear()}).catch(()=>{$('#yearNote').textContent='Historická data se nepodařilo načíst.'});initMap();refresh();setInterval(refresh,15*60*1000);
+fetch('annual.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(j=>{rows=j.filter(r=>r.rok>=2016);$('#dataTable').innerHTML=rows.map(r=>`<tr><td>${r.rok}</td><td>${fmt(r.prumer_C)}</td><td>${fmt(r.leto_C)}</td><td>${r.tropicke_dny}</td></tr>`).join('');updateYear()}).catch(()=>{$('#yearNote').textContent='Historická data se nepodařilo načíst.'});initMap();refresh();setInterval(refresh, WEATHER_REFRESH_MS);
+// Update freshness labels between fetches, including after a suspended tab resumes.
+setInterval(() => { if (map) drawMap(); }, 60 * 1000);
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    drawMap();
+    if (weatherFetchedAt === null || Date.now() - weatherFetchedAt >= WEATHER_REFRESH_MS) refresh();
+  }
+});
 
 // Actual OSM geometries, downloaded 2026-11-02, not inferred temperature surfaces.
 let geoData,greenLayer,buildingLayer,outlineLayer,satellite;
@@ -23,7 +143,29 @@ function renderGeo(){if(!map||!geoData)return;[greenLayer,buildingLayer,outlineL
  geoData.elements.filter(e=>isNear(e,centers)).forEach(e=>{let t=e.tags||{};if(e.type==='node'){trees++;L.circleMarker([e.lat,e.lon],{radius:5,color:'#245c35',weight:1,fillColor:'#43874d',fillOpacity:.9}).bindPopup('Strom evidovaný v OpenStreetMap. Nejde o úplný inventář stromů.').addTo(greenLayer);return}let g=e.geometry;if(!g||g.length<4)return;const pts=g.map(v=>[v.lat,v.lon]);if(t.building){buildings++;const site=places.find(p=>p.id===siteWayIds[e.id]);const poly=L.polygon(pts,{color:site?'#9b561c':'#82968c',weight:site?3:1,fillColor:site?'#e4a35b':'#a1b9a8',fillOpacity:site?.6:.22});poly.bindPopup(`<b>${site?site.name:'Budova'}</b>${site?'<br>'+site.address:''}<br>Skutečný půdorys z OpenStreetMap.<br>${site?'Přiřazeno podle adresního bodu uvnitř budovy. Nevymezuje celý areál.<br>':''}<a href="https://www.openstreetmap.org/way/${e.id}" target="_blank" rel="noopener">Zdroj půdorysu ↗</a>`);poly.addTo(site?outlineLayer:buildingLayer);if(site)poly.bindTooltip(site.name,{permanent:false,direction:'bottom',className:'siteLabel'});}else{green++;let name=t.landuse==='forest'||t.natural==='wood'?'Les / porost dřevin':t.landuse==='meadow'?'Louka':t.leisure==='park'?'Park':t.leisure==='garden'?'Zahrada':t.landuse==='orchard'?'Sad':t.natural==='scrub'?'Křoviny':'Travnatá / zelená plocha';L.polygon(pts,{color:'#43864e',weight:1,fillColor:'#68a56b',fillOpacity:.45}).bindPopup(`<b>${name}</b>${t.name?'<br>'+escapeHtml(t.name):''}<br>Mapovaná plocha OSM, nikoli měření NDVI nebo stínu.<br><a href="https://www.openstreetmap.org/way/${e.id}" target="_blank" rel="noopener">Zdroj plochy ↗</a>`).addTo(greenLayer)}});
  if($('#greenToggle').checked)greenLayer.addTo(map);if($('#buildingToggle').checked){buildingLayer.addTo(map);outlineLayer.addTo(map)}$('#geoStatus').textContent=`OSM · stav 2. 11. 2026 · ${buildings} půdorysů, ${green} zelených ploch a ${trees} jednotlivých stromů ve výběru. Evidence zeleně není úplná; zobrazeny jsou celé prvky zasahující svými body do okruhu.`;
 }
-const oldDrawMap=drawMap;drawMap=function(fit){oldDrawMap(fit);if(map){circles.forEach(c=>c.setStyle({fillOpacity:mode==='air'?.045:0}));labels.forEach((l,i)=>{const p=places.filter(p=>place==='both'||p.id===place)[i],w=weather.find(x=>x.id===p.id);l.setIcon(L.divIcon({className:'livepoint tempLabel',html:`<span style="display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;background:${w?color(w.temp):'#aab6ae'}"></span>${p.id==='school'?'Škola':'OV'} · ${w?fmt(w.temp,1)+' °C':'—'}<div style="font-size:9px;font-weight:400;color:#66776d">${mode==='surface'?'Vzduch · povrch nenapojen':'Vzduch · modelový odhad'}</div>`}));});renderGeo()}};
+const oldDrawMap = drawMap;
+drawMap = function(fit) {
+  oldDrawMap(fit);
+  if (!map) return;
+  const shown = places.filter(point => place === 'both' || point.id === place);
+  circles.forEach(circle => circle.setStyle({fillOpacity: mode === 'air' ? 0.045 : 0}));
+  labels.forEach((label, index) => {
+    const point = shown[index];
+    const reading = weather.find(item => item.id === point.id);
+    const stale = weatherIsStale(reading);
+    const temperature = reading ? fmt(reading.temp, 1) + ' °C' : '—';
+    const timestamp = reading ? `${stale ? 'Starší údaj · ' : ''}${reading.time}` : 'Načítání / nedostupné';
+    label.setIcon(L.divIcon({
+      className: 'livepoint tempLabel',
+      html: `<span style="display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;background:${reading ? color(reading.temp) : '#aab6ae'}"></span>` +
+        `${point.id === 'school' ? 'Škola' : 'OV'} · ${temperature}` +
+        `<div style="font-size:10px;font-weight:400;color:#526480">Vzduch · modelový odhad</div>` +
+        `<div style="font-size:10px;font-weight:400;color:${stale ? '#9a6034' : '#526480'}">${timestamp}</div>`
+    }));
+    label.bindPopup(liveWeatherPopup(point, reading));
+  });
+  renderGeo();
+};
 $('#greenToggle').onchange=renderGeo;$('#buildingToggle').onchange=renderGeo;
 $('#zoomSchool').onclick=()=>{place='school';document.querySelectorAll('.place').forEach(b=>b.classList.toggle('active',b.dataset.place===place));drawMap();map?.setView([places[0].lat,places[0].lon],18)};
 $('#zoomOv').onclick=()=>{place='ov';document.querySelectorAll('.place').forEach(b=>b.classList.toggle('active',b.dataset.place===place));drawMap();map?.setView([places[1].lat,places[1].lon],18)};
@@ -65,3 +207,4 @@ fetch('thermal-detail.json').then(r=>{if(!r.ok)throw Error();return r.json()}).t
 const drawBeforeDetail=drawMap;drawMap=function(fit){drawBeforeDetail(fit);if(detailOn&&detailData){$('#thermalDate').value='2025-08-12';labels.forEach((l,i)=>{const p=places.filter(p=>place==='both'||p.id===place)[i];const t=sampleDetail({lat:p.lat,lng:p.lon});l.setIcon(L.divIcon({className:'livepoint tempLabel',html:`<span style="display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;background:${t===null?'#aaa':color(t)}"></span>${p.id==='school'?'Škola':'OV'} · ${t===null?'bez dat':fmt(t,1)+' °C'}<div style="font-size:9px;font-weight:400;color:#66776d">Povrch · okolní pixel · 12. 8. 2025</div>`}));l.bindPopup(detailHtml({lat:p.lat,lng:p.lon}))});$('#mapNote').textContent='Barvy i štítky školy a OV ukazují historickou teplotu povrchu z 12. 8. 2025. Hodnota je odečtena z okolního pixelu, nikoli změřena samostatně na konkrétní střeše.'}};
 const showBeforeMarker=showThermal;showThermal=function(){showBeforeMarker();if(detailOn&&detailData)drawMap()};$('#cityLayer').onchange=()=>showThermal();
 if(detailData&&detailOn)drawMap();
+
