@@ -202,9 +202,9 @@
   const cityCache=new Map();
   const canSpeak='speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
   function stopSpeech(){if(canSpeak)window.speechSynthesis.cancel();panel.classList.remove('borikSpeaking');}
-  function speak(text){
+  function speak(text,interrupt=true){
     if(!sound||!canSpeak||document.hidden)return;
-    stopSpeech();el('borikVoiceStatus').textContent='';
+    if(interrupt)stopSpeech();el('borikVoiceStatus').textContent='';
     const utterance=new SpeechSynthesisUtterance(text);utterance.lang='cs-CZ';utterance.rate=.95;
     const voice=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith('cs'));
     if(voice)utterance.voice=voice;
@@ -273,7 +273,7 @@
     if(event.detail.target.requestId!==activeRequest)return;
     lastReading=event.detail;activeRequest=null;el('borikLocate').disabled=false;el('borikLocate').textContent='📍 Zjistit počasí znovu';
     el('borikMessage').textContent=sentence(lastReading);el('borikReplay').hidden=!canSpeak;
-    speak(sentence(lastReading));
+    speak(sentence(lastReading),false);
   });
   document.addEventListener('borometr:weather-error',event=>{if(activeRequest&&event.detail.target.requestId===activeRequest&&!panel.hidden)failure('Aktuální počasí se nepodařilo načíst. Zkuste to prosím znovu.');});
   document.addEventListener('borometr:weather-loading',event=>{
