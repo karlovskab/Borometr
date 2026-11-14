@@ -178,15 +178,16 @@
   document.addEventListener('borometr:select-location',event=>{
     const point=event.detail;
     if(!point||!Number.isFinite(point.latitude)||!Number.isFinite(point.longitude)||Math.abs(point.latitude)>90||Math.abs(point.longitude)>180)return;
-    quick({name:'Vaše aktuální poloha',latitude:point.latitude,longitude:point.longitude,requestId:point.requestId});
+    const city=typeof point.city==='string'?point.city.trim().slice(0,100):null;
+    quick({name:city?city+' · vaše poloha':'Vaše aktuální poloha',city,latitude:point.latitude,longitude:point.longitude,requestId:point.requestId});
   });
   loadWeather(school);
 })();
 </script><aside id="borikPanel" class="borikPanel" aria-labelledby="borikTitle">
   <button id="borikClose" class="borikClose" type="button" aria-label="Zavřít průvodce počasím">×</button>
   <div class="borikHello"><span class="borikCharacter" aria-hidden="true">🧑‍🔬</span><div><strong id="borikTitle">Ahoj, já jsem Borík!</strong><span>Váš průvodce počasím</span></div></div>
-  <p id="borikMessage" role="status" aria-live="polite">Chcete vědět, kolik je právě u vás stupňů? Zjistím teplotu a řeknu vám ji nahlas.</p>
-  <p id="borikPrivacy" class="borikPrivacy">Po povolení polohy pošleme přibližné souřadnice službě Open-Meteo pro zjištění počasí. Ukazujeme modelový odhad vzduchu, ne místní měření.</p>
+  <p id="borikMessage" role="status" aria-live="polite">Zjistím, ve kterém městě jste, a řeknu vám, kolik je tam právě stupňů.</p>
+  <p id="borikPrivacy" class="borikPrivacy">Po povolení polohy pošleme přibližné souřadnice službě Open-Meteo (počasí) a BigDataCloud (název obce). BigDataCloud je využívá také ke zpřesňování lokalizačních dat. Ukazujeme modelový odhad vzduchu. <a href="https://www.bigdatacloud.com/privacy-and-cookie-policy" target="_blank" rel="noopener">Soukromí</a>.</p>
   <button id="borikLocate" class="borikLocate" type="button">📍 Zjistit počasí u mě</button>
   <div class="borikControls"><button id="borikSound" type="button" aria-pressed="true">🔊 Zvuk zapnutý</button><button id="borikReplay" type="button" hidden>Přečíst znovu</button></div>
   <p id="borikVoiceStatus" class="borikPrivacy" role="status"></p>
@@ -197,7 +198,8 @@
 (() => {
   'use strict';
   const el=id=>document.getElementById(id),panel=el('borikPanel');
-  let sound=true,attempt=0,activeRequest=null,lastReading=null;
+  let sound=true,attempt=0,activeRequest=null,lastReading=null,cityController=null;
+  const cityCache=new Map();
   const canSpeak='speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
   function stopSpeech(){if(canSpeak)window.speechSynthesis.cancel();panel.classList.remove('borikSpeaking');}
   function speak(text){
@@ -211,26 +213,51 @@
     utterance.onerror=event=>{panel.classList.remove('borikSpeaking');if(event.error!=='canceled'&&event.error!=='interrupted')el('borikVoiceStatus').textContent='Hlas se nepodařilo přehrát. Zkuste Přečíst znovu; teplota zůstává v textu.';};
     try{window.speechSynthesis.resume();window.speechSynthesis.speak(utterance);}catch(error){el('borikVoiceStatus').textContent='Hlas není dostupný. Počasí zobrazím v textu.';}
   }
-  function dismiss(){++attempt;activeRequest=null;stopSpeech();panel.hidden=true;el('borikLauncher').hidden=false;el('borikLauncher').setAttribute('aria-expanded','false');el('borikLocate').disabled=false;}
+  function dismiss(){++attempt;activeRequest=null;cityController?.abort();stopSpeech();panel.hidden=true;el('borikLauncher').hidden=false;el('borikLauncher').setAttribute('aria-expanded','false');el('borikLocate').disabled=false;}
   function show(){panel.hidden=false;el('borikLauncher').hidden=true;el('borikLauncher').setAttribute('aria-expanded','true');}
+  async function cityForPosition(latitude,longitude){
+    const key=latitude+','+longitude;
+    if(cityCache.has(key))return cityCache.get(key);
+    const controller=new AbortController();cityController=controller;
+    const timer=setTimeout(()=>controller.abort(),6000);
+    try{
+      const url='https://api.bigdatacloud.net/data/reverse-geocode-client?'+new URLSearchParams({latitude,longitude,localityLanguage:'cs'});
+      const response=await fetch(url,{signal:controller.signal});
+      if(!response.ok)return null;
+      const result=await response.json();
+      // Never substitute an IP-based location for the device's GPS position.
+      if(String(result.lookupSource||'').toLowerCase().includes('ip'))return null;
+      if(Number.isFinite(result.latitude)&&Math.abs(result.latitude-latitude)>.02)return null;
+      if(Number.isFinite(result.longitude)&&Math.abs(result.longitude-longitude)>.02)return null;
+      const raw=result.city||result.locality;
+      if(typeof raw!=='string'||!raw.trim())return null;
+      const city=raw.replace(/[\u0000-\u001f]/g,'').trim().slice(0,100);
+      cityCache.set(key,city);return city;
+    }catch(error){return null;}
+    finally{clearTimeout(timer);if(cityController===controller)cityController=null;}
+  }
   function sentence(reading){
     const current=Date.now()/1000-reading.validAt<45*60 && Date.now()-reading.fetchedAt<30*60*1000;
     const temperature=new Intl.NumberFormat('cs-CZ',{minimumFractionDigits:1,maximumFractionDigits:1}).format(reading.temperature);
     const valid=new Intl.DateTimeFormat('cs-CZ',{timeZone:'Europe/Prague',day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(reading.validAt*1000));
-    return (current?'Podle modelu je u vás právě ':'Poslední dostupný modelový údaj je ')+temperature+' stupňů Celsia. Platnost '+valid+'.';
+    const place=reading.target.city?'Vaše poloha: '+reading.target.city+'. ':'';
+    return place+(current?'Podle modelu je tu právě ':'Poslední dostupný modelový údaj je ')+temperature+' stupně Celsia. Platnost '+valid+'.';
   }
   function failure(message){activeRequest=null;el('borikLocate').disabled=false;el('borikLocate').textContent='Zkusit polohu znovu';el('borikMessage').textContent=message;}
   el('borikLocate').addEventListener('click',()=>{
     if(!navigator.geolocation){failure('Tento prohlížeč neumí zjistit polohu. Vyberte místo ručně v meteostanici.');return;}
+    cityController?.abort();
     const ticket=++attempt;activeRequest='borik-'+ticket;lastReading=null;el('borikReplay').hidden=true;
     el('borikLocate').disabled=true;el('borikMessage').textContent='Zjišťuji polohu. Prohlížeč vás může požádat o její povolení.';
-    speak('Ahoj! Zjistím, jak je u vás.');
-    navigator.geolocation.getCurrentPosition(position=>{
+    speak('Ahoj, já jsem Borík, váš průvodce počasím. Zjistím, kde jste a kolik je tam právě stupňů.');
+    navigator.geolocation.getCurrentPosition(async position=>{
       if(ticket!==attempt||panel.hidden)return;
       const latitude=Number(position.coords.latitude.toFixed(3)),longitude=Number(position.coords.longitude.toFixed(3));
       if(!Number.isFinite(latitude)||!Number.isFinite(longitude)||Math.abs(latitude)>90||Math.abs(longitude)>180){failure('Polohu se nepodařilo určit. Vyberte místo ručně.');return;}
-      el('borikMessage').textContent='Mám polohu, načítám aktuální počasí…';
-      document.dispatchEvent(new CustomEvent('borometr:select-location',{detail:{name:'Vaše aktuální poloha',latitude,longitude,requestId:activeRequest}}));
+      el('borikMessage').textContent='Mám polohu, zjišťuji město a aktuální počasí…';
+      const city=await cityForPosition(latitude,longitude);
+      if(ticket!==attempt||panel.hidden)return;
+      document.dispatchEvent(new CustomEvent('borometr:select-location',{detail:{name:city?city+' · vaše poloha':'Vaše aktuální poloha',city,latitude,longitude,requestId:activeRequest}}));
     },error=>{
       if(ticket!==attempt||panel.hidden)return;
       const messages={1:'Polohu nemáme povolenou. Nevadí, vyberte místo ručně v meteostanici.',2:'Zařízení polohu nezjistilo. Zkuste to znovu nebo vyberte místo ručně.',3:'Zjišťování polohy trvalo příliš dlouho. Zkuste to znovu nebo vyberte místo ručně.'};
@@ -263,6 +290,7 @@
   if(!canSpeak){sound=false;el('borikSound').hidden=true;el('borikVoiceStatus').textContent='Tento prohlížeč nemá hlasové čtení. Teplotu zobrazím v textu.';}
 })();
 </script></body></html>
+
 
 
 
