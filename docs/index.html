@@ -10,6 +10,7 @@
 .maptools label[hidden],.liveReadings[hidden],.landscapeDashboard[hidden]{display:none!important}
 @media(max-width:600px){.liveReadings{grid-template-columns:1fr}}
 </style><style>.meteo{margin-bottom:24px;scroll-margin-top:20px}.meteo .panelhead p{margin:7px 0 0}.meteoSearch{display:flex;gap:12px;align-items:flex-end;margin-top:20px}.meteoSearch label{flex:1;font-size:13px;font-weight:650}.meteoSearch input{display:block;width:100%;margin-top:8px;padding:12px;font:inherit;color:var(--ink);background:#fff;border:1px solid #becbdc;border-radius:8px;min-width:0}.meteoSearch button{background:#122d66;color:white;padding:12px 17px}.meteo :is(input,button,a):focus-visible{outline:3px solid #c62656;outline-offset:3px}.meteo button:disabled{opacity:.6;cursor:wait}.meteoQuick{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:15px}.meteoResults{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.meteoResults[hidden],.meteo [hidden]{display:none!important}.meteoResults button{width:100%;text-align:left;line-height:1.5}.meteoResults small{display:block;color:#526480}.meteoReadings{display:grid;grid-template-columns:1fr 1.5fr;gap:25px;margin-top:17px;padding-top:18px;border-top:1px solid var(--line)}.meteoPrimary h3{font-size:21px;margin:0 0 5px;color:#122d66}.meteoTemperature{font-size:clamp(38px,5vw,58px);font-weight:750;letter-spacing:-2px;color:#1160af;margin:8px 0}.meteoMetrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:4px 0}.meteoMetrics dt{font-size:12px;color:#526480}.meteoMetrics dd{margin:5px 0 0;font-size:24px;font-weight:650;color:#122d66}.meteoMeta{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12px;color:#526480;line-height:1.6;margin-top:20px}.meteoLinks{display:flex;align-items:center;gap:17px;flex-wrap:wrap;margin-top:15px}.meteoLinks a{font-size:12px}.meteo .warning{color:#9a3d22}@media(max-width:600px){.meteo .panelhead{flex-direction:column}.meteoSearch{align-items:stretch;flex-direction:column}.meteoReadings{grid-template-columns:1fr}.meteoResults{grid-template-columns:1fr}.meteoQuick button{flex:1}.meteoMeta{flex-direction:column}.meteoTemperature{font-size:48px}}
+</style><style>.borikPanel{position:fixed;z-index:1100;right:22px;bottom:22px;width:min(355px,calc(100vw - 24px));max-height:calc(100dvh - 32px);overflow-y:auto;padding:22px;background:#fff;border:1px solid #dbe4f2;border-radius:20px;box-shadow:0 12px 45px #122d6630;color:#122d66;animation:borikArrive .35s ease-out;font:14px system-ui,sans-serif}.borikPanel[hidden],.borikLauncher[hidden],.borikPanel [hidden]{display:none!important}.borikClose{position:absolute;right:9px;top:8px;border:0;background:transparent;font-size:24px;line-height:1;padding:6px 9px}.borikHello{display:flex;align-items:center;gap:13px;padding-right:12px}.borikCharacter{font-size:58px;line-height:1.2;display:inline-block;transform-origin:bottom center}.borikHello strong{font-size:19px;display:block}.borikHello div>span{font-size:12px;color:#526480;display:block;margin-top:3px}.borikPanel p{margin:14px 0;line-height:1.55}.borikPanel .borikPrivacy{font-size:11px;color:#526480;line-height:1.5;margin:10px 0}.borikLocate{width:100%;background:#122d66;color:#fff;border-color:#122d66;font-weight:650;padding:12px}.borikControls{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.borikControls button{font-size:12px}.borikManual{border:0;background:transparent;text-decoration:underline;font-size:12px;padding:6px 0;color:#1160af;text-align:left}.borikPanel button:disabled{opacity:.6;cursor:wait}.borikLauncher{position:fixed;z-index:1100;right:20px;bottom:20px;background:#122d66;color:#fff;box-shadow:0 5px 20px #122d6630;border-radius:30px;padding:10px 16px;font-weight:650}.borikLauncher span{font-size:28px;vertical-align:middle}.borikPanel button:focus-visible,.borikLauncher:focus-visible{outline:3px solid #c62656;outline-offset:3px}.borikSpeaking .borikCharacter{animation:borikTalk .6s ease-in-out infinite alternate}@keyframes borikArrive{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@keyframes borikTalk{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}@media(max-width:600px){.borikPanel{right:12px;bottom:12px;padding:18px}.borikLauncher{right:12px;bottom:12px}}@media(prefers-reduced-motion:reduce){.borikPanel,.borikSpeaking .borikCharacter{animation:none}}
 </style></head><body><header><a class="brand" href="#" aria-label="BORometr – úvod"><img class="schoolLogo" src="ssbor-logo.png" alt="Logo Střední školy Bor" width="65" height="72"><span class="brandText"><span class="brandName">BOR<span>ometr</span></span><span class="brandCaption">KLIMA POD LUPOU</span><span class="brandSchool">Studentský projekt SŠ Bor</span></span></a><nav><a href="#vyvoj">Vývoj teplot</a><a href="#meteostanice">Počasí teď</a><a href="#mapa">Mapa okolí</a><a href="#zelen">Zelenější budoucnost</a><a href="#srovnani">Srovnání škol</a><a href="#zdroje">O datech ↗</a></nav></header><main><div class="intro"><div><div class="eyebrow">Střední škola Bor · data pro lepší prostředí</div><h1>BORometr.<br><span>Klima pod lupou.</span></h1><p>Jak horká je naše budoucnost? Sledujeme proměnu teplot kolem školy, hledáme chladnější místa a ukazujeme, kde může pomoci zeleň.</p><div class="projectStatus">Družicová mapa · vývoj teplot · 57 středních škol Plzeňského kraje</div><p class="small"><a href="#datasety">Datové sady ke stažení a četnost aktualizací ↓</a></p></div><div class="schoolIdentity"><img src="ssbor-logo.png" alt="Střední škola Bor – originální logo" width="155" height="166"><span class="identityLabel">MĚŘÍME ZMĚNU. HLEDÁME ŘEŠENÍ.</span><a href="https://www.ssbor.cz/" target="_blank" rel="noopener">Poznejte naši školu · ssbor.cz ↗</a></div></div><div class="filters"><span class="small">SLEDOVANÉ MÍSTO</span><button class="active place" data-place="both">Obě pracoviště</button><button class="place" data-place="school">Hlavní škola</button><button class="place" data-place="ov">Pracoviště OV</button><span class="push small">◎ Poloměr mapy <b id="radiusSummary">100 metrů</b> · 2016–2025</span></div><div class="cards"><div class="card"><div class="label">Rozdíl mezi pětiletími</div><div class="value warm">+0,13 <span style="font-size:20px">°C</span></div><div class="small">2021–2025 oproti 2016–2020<br>Modelový kontext oblasti Boru</div></div><div class="card"><div class="label">Trend za sledované období</div><div class="value warm">+0,80 <span style="font-size:20px">°C / 10 let</span></div><div class="small">Lineární trend 2016–2025<br>Popis minulosti, nikoli předpověď</div></div><div class="card"><div class="label" id="annualLabel">Průměrná teplota v roce 2025</div><div class="value" id="annualValue">9,15 <span style="font-size:20px">°C</span></div><div class="small" id="annualSub">Letní průměr 18,46 °C</div></div><div class="card"><div class="label">Aktuální modelový odhad · škola</div><div class="value" id="current">— <span style="font-size:20px">°C</span></div><div class="small" id="liveTime" role="status">Připojuji aktuální data…</div></div></div><section class="panel meteo" id="meteostanice" aria-labelledby="meteoTitle">
   <div class="panelhead"><div><div class="eyebrow">Počasí právě teď</div><h2 id="meteoTitle">Malá meteostanice</h2><p class="small">Vyhledejte obec, PSČ nebo GPS souřadnice a zjistěte aktuální počasí pro dané místo.</p></div><span class="tag">Open-Meteo · modelový odhad</span></div>
   <form id="meteoSearchForm" class="meteoSearch" role="search" aria-label="Vyhledat počasí podle místa">
@@ -90,6 +91,7 @@
     el('meteoRefresh').disabled=true;
     el('meteoWeatherStatus').classList.remove('warning');
     el('meteoWeatherStatus').textContent='Načítám počasí: '+target.name+'…';
+    document.dispatchEvent(new CustomEvent('borometr:weather-loading',{detail:{target}}));
     const query=new URLSearchParams({latitude:target.latitude,longitude:target.longitude,current:'temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m,wind_direction_10m',timezone:'Europe/Prague',timeformat:'unixtime',temperature_unit:'celsius',wind_speed_unit:'kmh',precipitation_unit:'mm',forecast_days:'1'});
     const url='https://api.open-meteo.com/v1/forecast?'+query;
     const controllerForRequest=controller;
@@ -117,8 +119,10 @@
       el('meteoSource').href=url;
       el('meteoReading').hidden=false;
       staleMessage();
+      document.dispatchEvent(new CustomEvent('borometr:weather-ready',{detail:{target,temperature:c.temperature_2m,validAt:c.time,fetchedAt:reading.fetched}}));
     } catch (error) {
       if (ticket!==sequence) return;
+      document.dispatchEvent(new CustomEvent('borometr:weather-error',{detail:{target}}));
       if (reading) staleMessage(true);
       else {el('meteoWeatherStatus').textContent='Počasí pro '+target.name+' se nepodařilo načíst. Zkontrolujte připojení a zkuste Obnovit počasí.';el('meteoWeatherStatus').classList.add('warning');}
     } finally {clearTimeout(timer);if(ticket===sequence)el('meteoRefresh').disabled=false;}
@@ -171,9 +175,95 @@
   });
   setInterval(()=>{if(!document.hidden)loadWeather(selected);},15*60*1000);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden&&(!reading||Date.now()-reading.fetched>15*60*1000))loadWeather(selected);});
+  document.addEventListener('borometr:select-location',event=>{
+    const point=event.detail;
+    if(!point||!Number.isFinite(point.latitude)||!Number.isFinite(point.longitude)||Math.abs(point.latitude)>90||Math.abs(point.longitude)>180)return;
+    quick({name:'Vaše aktuální poloha',latitude:point.latitude,longitude:point.longitude,requestId:point.requestId});
+  });
   loadWeather(school);
 })();
+</script><aside id="borikPanel" class="borikPanel" aria-labelledby="borikTitle">
+  <button id="borikClose" class="borikClose" type="button" aria-label="Zavřít průvodce počasím">×</button>
+  <div class="borikHello"><span class="borikCharacter" aria-hidden="true">🧑‍🔬</span><div><strong id="borikTitle">Ahoj, já jsem Borík!</strong><span>Váš průvodce počasím</span></div></div>
+  <p id="borikMessage" role="status" aria-live="polite">Chcete vědět, kolik je právě u vás stupňů? Zjistím teplotu a řeknu vám ji nahlas.</p>
+  <p id="borikPrivacy" class="borikPrivacy">Po povolení polohy pošleme přibližné souřadnice službě Open-Meteo pro zjištění počasí. Ukazujeme modelový odhad vzduchu, ne místní měření.</p>
+  <button id="borikLocate" class="borikLocate" type="button">📍 Zjistit počasí u mě</button>
+  <div class="borikControls"><button id="borikSound" type="button" aria-pressed="true">🔊 Zvuk zapnutý</button><button id="borikReplay" type="button" hidden>Přečíst znovu</button></div>
+  <p id="borikVoiceStatus" class="borikPrivacy" role="status"></p>
+  <button id="borikManual" class="borikManual" type="button">Bez polohy · vybrat místo ručně</button>
+</aside>
+<button id="borikLauncher" class="borikLauncher" type="button" aria-label="Otevřít průvodce počasím Boríka" aria-expanded="true" aria-controls="borikPanel" hidden><span aria-hidden="true">🧑‍🔬</span> Borík</button>
+<script>/* Borík asks for permission before requesting location or starting speech. */
+(() => {
+  'use strict';
+  const el=id=>document.getElementById(id),panel=el('borikPanel');
+  let sound=true,attempt=0,activeRequest=null,lastReading=null;
+  const canSpeak='speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  function stopSpeech(){if(canSpeak)window.speechSynthesis.cancel();panel.classList.remove('borikSpeaking');}
+  function speak(text){
+    if(!sound||!canSpeak||document.hidden)return;
+    stopSpeech();el('borikVoiceStatus').textContent='';
+    const utterance=new SpeechSynthesisUtterance(text);utterance.lang='cs-CZ';utterance.rate=.95;
+    const voice=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith('cs'));
+    if(voice)utterance.voice=voice;
+    utterance.onstart=()=>panel.classList.add('borikSpeaking');
+    utterance.onend=()=>panel.classList.remove('borikSpeaking');
+    utterance.onerror=event=>{panel.classList.remove('borikSpeaking');if(event.error!=='canceled'&&event.error!=='interrupted')el('borikVoiceStatus').textContent='Hlas se nepodařilo přehrát. Zkuste Přečíst znovu; teplota zůstává v textu.';};
+    try{window.speechSynthesis.resume();window.speechSynthesis.speak(utterance);}catch(error){el('borikVoiceStatus').textContent='Hlas není dostupný. Počasí zobrazím v textu.';}
+  }
+  function dismiss(){++attempt;activeRequest=null;stopSpeech();panel.hidden=true;el('borikLauncher').hidden=false;el('borikLauncher').setAttribute('aria-expanded','false');el('borikLocate').disabled=false;}
+  function show(){panel.hidden=false;el('borikLauncher').hidden=true;el('borikLauncher').setAttribute('aria-expanded','true');}
+  function sentence(reading){
+    const current=Date.now()/1000-reading.validAt<45*60 && Date.now()-reading.fetchedAt<30*60*1000;
+    const temperature=new Intl.NumberFormat('cs-CZ',{minimumFractionDigits:1,maximumFractionDigits:1}).format(reading.temperature);
+    const valid=new Intl.DateTimeFormat('cs-CZ',{timeZone:'Europe/Prague',day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(reading.validAt*1000));
+    return (current?'Podle modelu je u vás právě ':'Poslední dostupný modelový údaj je ')+temperature+' stupňů Celsia. Platnost '+valid+'.';
+  }
+  function failure(message){activeRequest=null;el('borikLocate').disabled=false;el('borikLocate').textContent='Zkusit polohu znovu';el('borikMessage').textContent=message;}
+  el('borikLocate').addEventListener('click',()=>{
+    if(!navigator.geolocation){failure('Tento prohlížeč neumí zjistit polohu. Vyberte místo ručně v meteostanici.');return;}
+    const ticket=++attempt;activeRequest='borik-'+ticket;lastReading=null;el('borikReplay').hidden=true;
+    el('borikLocate').disabled=true;el('borikMessage').textContent='Zjišťuji polohu. Prohlížeč vás může požádat o její povolení.';
+    speak('Ahoj! Zjistím, jak je u vás.');
+    navigator.geolocation.getCurrentPosition(position=>{
+      if(ticket!==attempt||panel.hidden)return;
+      const latitude=Number(position.coords.latitude.toFixed(3)),longitude=Number(position.coords.longitude.toFixed(3));
+      if(!Number.isFinite(latitude)||!Number.isFinite(longitude)||Math.abs(latitude)>90||Math.abs(longitude)>180){failure('Polohu se nepodařilo určit. Vyberte místo ručně.');return;}
+      el('borikMessage').textContent='Mám polohu, načítám aktuální počasí…';
+      document.dispatchEvent(new CustomEvent('borometr:select-location',{detail:{name:'Vaše aktuální poloha',latitude,longitude,requestId:activeRequest}}));
+    },error=>{
+      if(ticket!==attempt||panel.hidden)return;
+      const messages={1:'Polohu nemáme povolenou. Nevadí, vyberte místo ručně v meteostanici.',2:'Zařízení polohu nezjistilo. Zkuste to znovu nebo vyberte místo ručně.',3:'Zjišťování polohy trvalo příliš dlouho. Zkuste to znovu nebo vyberte místo ručně.'};
+      failure(messages[error.code]||'Polohu se nepodařilo zjistit. Vyberte místo ručně.');
+    },{enableHighAccuracy:false,timeout:12000,maximumAge:60000});
+  });
+  document.addEventListener('borometr:weather-ready',event=>{
+    if(panel.hidden)return;
+    if(!activeRequest){
+      if(lastReading&&event.detail.target.requestId===lastReading.target.requestId){lastReading=event.detail;el('borikMessage').textContent=sentence(lastReading);}
+      return;
+    }
+    if(event.detail.target.requestId!==activeRequest)return;
+    lastReading=event.detail;activeRequest=null;el('borikLocate').disabled=false;el('borikLocate').textContent='📍 Zjistit počasí znovu';
+    el('borikMessage').textContent=sentence(lastReading);el('borikReplay').hidden=!canSpeak;
+    speak(sentence(lastReading));
+  });
+  document.addEventListener('borometr:weather-error',event=>{if(activeRequest&&event.detail.target.requestId===activeRequest&&!panel.hidden)failure('Aktuální počasí se nepodařilo načíst. Zkuste to prosím znovu.');});
+  document.addEventListener('borometr:weather-loading',event=>{
+    if(activeRequest&&event.detail.target.requestId!==activeRequest){++attempt;failure('V meteostanici už vybíráte jiné místo. Počasí najdete přímo v ní, nebo znovu zjistěte svou polohu.');}
+  });
+  el('borikReplay').addEventListener('click',()=>{if(lastReading){if(!sound){sound=true;updateSound();}el('borikMessage').textContent=sentence(lastReading);speak(sentence(lastReading));}});
+  function updateSound(){el('borikSound').setAttribute('aria-pressed',String(sound));el('borikSound').textContent=sound?'🔊 Zvuk zapnutý':'🔇 Zvuk vypnutý';}
+  el('borikSound').addEventListener('click',()=>{sound=!sound;updateSound();if(!sound)stopSpeech();});
+  el('borikClose').addEventListener('click',dismiss);
+  el('borikLauncher').addEventListener('click',show);
+  el('borikManual').addEventListener('click',()=>{dismiss();document.getElementById('meteostanice').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});el('meteoQuery').focus({preventScroll:true});});
+  panel.addEventListener('keydown',event=>{if(event.key==='Escape'){dismiss();el('borikLauncher').focus();}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stopSpeech();});
+  if(!canSpeak){sound=false;el('borikSound').hidden=true;el('borikVoiceStatus').textContent='Tento prohlížeč nemá hlasové čtení. Teplotu zobrazím v textu.';}
+})();
 </script></body></html>
+
 
 
 
